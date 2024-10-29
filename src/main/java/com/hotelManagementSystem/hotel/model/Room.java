@@ -33,7 +33,7 @@ public class Room {
     @Column(name = "roomCategory")
     private RoomCategory roomCategory;
     @JsonProperty("roomAvailable")
-    @Column(name = "roomAvailable")
+    @Column(name = "roomAvailable", columnDefinition = "TINYINT(1) default 1")
     private boolean roomAvailable;
     @JsonManagedReference(value = "roomBooking")
     @OneToOne(mappedBy = "room", cascade = CascadeType.ALL)
