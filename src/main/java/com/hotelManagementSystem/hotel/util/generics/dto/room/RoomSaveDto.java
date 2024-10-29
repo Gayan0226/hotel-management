@@ -1,4 +1,4 @@
-package com.hotelManagementSystem.hotel.util.generics.dto;
+package com.hotelManagementSystem.hotel.util.generics.dto.room;
 
 import com.hotelManagementSystem.hotel.model.enums.RoomCategory;
 import com.hotelManagementSystem.hotel.model.enums.RoomType;

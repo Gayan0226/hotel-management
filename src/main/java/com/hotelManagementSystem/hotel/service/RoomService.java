@@ -1,14 +1,16 @@
 package com.hotelManagementSystem.hotel.service;
 import com.hotelManagementSystem.hotel.model.Room;
-import com.hotelManagementSystem.hotel.util.generics.dto.RoomSaveDto;
+import com.hotelManagementSystem.hotel.util.generics.dto.room.RoomSaveDto;
+import com.hotelManagementSystem.hotel.util.generics.dto.room.RoomUpdateDto;
 import com.hotelManagementSystem.hotel.util.generics.service.CommonService;
+import org.springframework.http.HttpStatusCode;
 
 import java.util.List;
 
 public interface RoomService extends CommonService<Room, Integer> {
     List<Room> findAll();
 
-    String findDetailsById(Integer id);
+    Room findDetailsById(Integer id);
 
     Room update(Room t, Integer id);
 
@@ -17,4 +19,10 @@ public interface RoomService extends CommonService<Room, Integer> {
     Room create(Room t);
 
     String save(RoomSaveDto t);
+
+
+    String updateAvailability( int id,boolean available);
+
+
+    String updateRoomDetails(RoomUpdateDto updateDto, int id);
 }

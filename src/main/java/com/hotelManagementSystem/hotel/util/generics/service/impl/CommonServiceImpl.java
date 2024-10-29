@@ -1,5 +1,6 @@
 package com.hotelManagementSystem.hotel.util.generics.service.impl;
 
+import com.hotelManagementSystem.hotel.exception.NotFoundException;
 import com.hotelManagementSystem.hotel.util.generics.mapper.RoomMap;
 import com.hotelManagementSystem.hotel.util.generics.repository.CommonRepository;
 import com.hotelManagementSystem.hotel.util.generics.service.CommonService;
@@ -21,13 +22,8 @@ public class CommonServiceImpl<T, ID, R extends CommonRepository<T, ID>> impleme
     }
 
     @Override
-    public String findDetailsById(ID id) {
-        if (repository.existsById(id)) {
-            repository.deleteById(id);
-            return "Delete Successful!";
-        } else {
-            return "delete fail!";
-        }
+    public T findDetailsById(ID id) {
+        return repository.findById(id).orElseThrow(()->new NotFoundException("Not Found Details"));
     }
 
     @Override

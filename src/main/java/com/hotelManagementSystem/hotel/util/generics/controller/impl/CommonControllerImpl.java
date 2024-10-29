@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -22,13 +23,12 @@ public class CommonControllerImpl<T, ID, S extends CommonService<T, ID>> impleme
 
     @Override
     public ResponseEntity<List<T>> getAll() throws Exception {
-        //List<T> entities = service.findAll();
         return new ResponseEntity<List<T>>(service.findAll(), HttpStatus.OK);
     }
 
     @Override
-    public ResponseEntity<String> findById(@PathVariable("id") ID id) throws Exception {
-        return new ResponseEntity<String>(service.findDetailsById(id), HttpStatus.OK);
+    public ResponseEntity<T> findById(@PathVariable("id") ID id) throws Exception {
+        return new ResponseEntity<T>(service.findDetailsById(id), HttpStatus.OK);
     }
 
     @Override
