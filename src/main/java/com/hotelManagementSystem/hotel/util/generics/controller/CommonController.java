@@ -14,4 +14,5 @@ public interface CommonController<T,ID> {
     ResponseEntity<T> delete(ID id) throws Exception;
 
     ResponseEntity<T> add(T t) throws Exception;
+
 }

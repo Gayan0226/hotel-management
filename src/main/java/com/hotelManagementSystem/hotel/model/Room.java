@@ -1,18 +1,18 @@
 package com.hotelManagementSystem.hotel.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.hotelManagementSystem.hotel.model.enums.RoomCategory;
 import com.hotelManagementSystem.hotel.model.enums.RoomType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.repository.NoRepositoryBean;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name="room")
+@Table(name = "room")
 public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,6 +28,9 @@ public class Room {
     private RoomCategory roomCategory;
     @Column(name = "roomAvailable")
     private boolean roomAvailable;
+    @JsonManagedReference
+    @OneToOne(mappedBy = "room", cascade = CascadeType.ALL)
+    private Booking booking;
 
     public Room(Long roomPrice, RoomType roomType, RoomCategory roomCategory, boolean roomAvailable) {
         this.roomPrice = roomPrice;
