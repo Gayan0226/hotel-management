@@ -3,14 +3,15 @@ package com.hotelManagementSystem.hotel.util.generics.service.impl;
 import com.hotelManagementSystem.hotel.util.generics.repository.CommonRepository;
 import com.hotelManagementSystem.hotel.util.generics.service.CommonService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-public abstract class CommonServiceImpl<T, ID, R extends CommonRepository<T, ID>> implements CommonService<T, ID> {
-
+public class CommonServiceImpl<T, ID, R extends CommonRepository<T, ID>> implements CommonService<T, ID> {
     protected final R repository;
-    CommonServiceImpl(R repository){
-        this.repository=repository;
+
+    public CommonServiceImpl(R repository) {
+        this.repository = repository;
     }
 
     @Override

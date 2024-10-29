@@ -1,4 +1,4 @@
-package com.hotelManagementSystem.hotel.util.generics.controller.ipml;
+package com.hotelManagementSystem.hotel.util.generics.controller.impl;
 
 import com.hotelManagementSystem.hotel.util.generics.controller.CommonController;
 import com.hotelManagementSystem.hotel.util.generics.service.CommonService;
