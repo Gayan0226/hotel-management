@@ -23,7 +23,7 @@ public class Booking {
     private LocalDate outDate;
     @Column(name = "inDate")
     private LocalDate inDate;
-    @JsonBackReference
+    @JsonBackReference(value = "roomBooking")
     @OneToOne
     @JoinColumn(name = "roomId")
     private Room room;

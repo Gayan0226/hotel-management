@@ -3,6 +3,7 @@ package com.hotelManagementSystem.hotel.util.generics.controller.impl;
 import com.hotelManagementSystem.hotel.util.generics.controller.CommonController;
 import com.hotelManagementSystem.hotel.util.generics.service.CommonService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,9 +11,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
-@RequiredArgsConstructor
+
 public class CommonControllerImpl<T, ID, S extends CommonService<T, ID>> implements CommonController<T, ID> {
-    protected S service;
+
+    protected final S service;
 
     public CommonControllerImpl(S service) {
         this.service = service;

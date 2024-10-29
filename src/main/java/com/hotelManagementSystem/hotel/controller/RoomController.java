@@ -2,6 +2,7 @@ package com.hotelManagementSystem.hotel.controller;
 
 import com.hotelManagementSystem.hotel.model.Room;
 import com.hotelManagementSystem.hotel.util.generics.controller.CommonController;
+import com.hotelManagementSystem.hotel.util.generics.dto.RoomSaveDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,5 +22,5 @@ public interface RoomController extends CommonController<Room, Integer> {
     ResponseEntity<Room> delete(@PathVariable("id") Integer id) throws Exception;
 
     @PostMapping("/save")
-    ResponseEntity<Room> add(@RequestBody Room t) throws Exception;
+    ResponseEntity<String> add(@RequestBody RoomSaveDto t) throws Exception;
 }
