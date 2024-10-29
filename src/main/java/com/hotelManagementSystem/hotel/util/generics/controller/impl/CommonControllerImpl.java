@@ -41,9 +41,5 @@ public class CommonControllerImpl<T, ID, S extends CommonService<T, ID>> impleme
         return new ResponseEntity<T>(service.deleteById(id), HttpStatus.OK);
     }
 
-    @Override
-    public ResponseEntity<T> add(@RequestBody T t) throws Exception {
-        return new ResponseEntity<T>(service.create(t), HttpStatus.OK);
 
-    }
 }

@@ -19,15 +19,15 @@ public class Customer {
     @Column(name = "customerId")
     private int customerId;
     @Column(name = "customerName")
-    private int customerName;
+    private String customerName;
     @Column(name = "password")
-    private int password;
+    private String password;
     @Column(name = "userName")
-    private int userName;
+    private String userName;
     @Column(name = "contactNumber")
-    private int contactNumber;
+    private String contactNumber;
     @Column(name = "customerIdNumber")
-    private int idNumber;
+    private Long idNumber;
     @JsonManagedReference
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     private Set<Booking> booking;

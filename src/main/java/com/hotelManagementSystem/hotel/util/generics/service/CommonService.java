@@ -11,5 +11,5 @@ public interface CommonService<T, ID> {
 
     T deleteById(ID id);
 
-    T create(T t);
+
 }

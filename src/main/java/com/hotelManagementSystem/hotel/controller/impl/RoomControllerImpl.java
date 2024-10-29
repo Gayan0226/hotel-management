@@ -30,11 +30,6 @@ public class RoomControllerImpl extends CommonControllerImpl<Room, Integer, Room
     }
 
     @Override
-    public ResponseEntity<Room> add(Room room) throws Exception {
-        return super.add(room);
-    }
-
-    @Override
     public ResponseEntity<List<Room>> getAll() throws Exception {
         return super.getAll();
     }
@@ -49,12 +44,12 @@ public class RoomControllerImpl extends CommonControllerImpl<Room, Integer, Room
     }
 
     @Override
-    public ResponseEntity<String> updateAvailability(int id,boolean available) throws Exception {
-        return new ResponseEntity<String>(service.updateAvailability(id,available),HttpStatus.OK);
+    public ResponseEntity<String> updateAvailability(int id, boolean available) throws Exception {
+        return new ResponseEntity<String>(service.updateAvailability(id, available), HttpStatus.OK);
     }
 
     @Override
     public ResponseEntity<String> updateAvailability(int id, RoomUpdateDto updateDto) throws Exception {
-        return new ResponseEntity<String>( service.updateRoomDetails(updateDto,id),HttpStatus.OK);
+        return new ResponseEntity<String>(service.updateRoomDetails(updateDto, id), HttpStatus.OK);
     }
 }
