@@ -49,5 +49,11 @@ public class Booking {
             updateTime = LocalDateTime.now();
         }
     }
+    public Booking(LocalDate outDate, LocalDate inDate, Room room, Customer customer) {
+        this.outDate = outDate;
+        this.inDate = inDate;
+        this.room = room;
+        this.customer = customer;
+    }
 
 }
