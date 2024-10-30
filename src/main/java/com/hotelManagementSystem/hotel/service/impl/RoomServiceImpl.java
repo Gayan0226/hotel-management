@@ -3,6 +3,7 @@ package com.hotelManagementSystem.hotel.service.impl;
 import com.hotelManagementSystem.hotel.exception.NotFoundException;
 import com.hotelManagementSystem.hotel.model.Room;
 import com.hotelManagementSystem.hotel.model.enums.RoomCategory;
+import com.hotelManagementSystem.hotel.model.enums.RoomType;
 import com.hotelManagementSystem.hotel.service.RoomService;
 import com.hotelManagementSystem.hotel.util.generics.dto.room.RoomSaveDto;
 import com.hotelManagementSystem.hotel.util.generics.dto.room.RoomUpdateDto;
@@ -12,6 +13,8 @@ import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 
@@ -43,17 +46,26 @@ public class RoomServiceImpl extends CommonServiceImpl<Room, Integer, RoomReposi
     @Override
     public String updateRoomDetails(RoomUpdateDto updateDto, int id) {
         Room room = repository.findById(id).orElseThrow(() -> new NotFoundException("Not Found Room Details"));
-        if(room!=null){
+        if (room != null) {
             room.setRoomAvailable(updateDto.isRoomAvailable());
             room.setRoomCategory(updateDto.getRoomCategory());
             room.setRoomType(updateDto.getRoomType());
             room.setRoomPrice(updateDto.getRoomPrice());
             repository.save(room);
             return "Update Successful!";
-        }
-        else{
+        } else {
             return "Failed Update";
         }
+    }
+
+    @Override
+    public List<RoomType> getRoomType() {
+        return List.of(RoomType.values());
+    }
+
+    @Override
+    public List<RoomCategory> getRoomCategory() {
+        return List.of(RoomCategory.values());
     }
 
 }

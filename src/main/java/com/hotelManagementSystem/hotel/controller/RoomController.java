@@ -1,6 +1,8 @@
 package com.hotelManagementSystem.hotel.controller;
 
 import com.hotelManagementSystem.hotel.model.Room;
+import com.hotelManagementSystem.hotel.model.enums.RoomCategory;
+import com.hotelManagementSystem.hotel.model.enums.RoomType;
 import com.hotelManagementSystem.hotel.util.generics.controller.CommonController;
 import com.hotelManagementSystem.hotel.util.generics.dto.room.RoomSaveDto;
 import com.hotelManagementSystem.hotel.util.generics.dto.room.RoomUpdateDto;
@@ -37,4 +39,8 @@ public interface RoomController extends CommonController<Room, Integer> {
             @PathVariable("id") int id,
             @RequestBody RoomUpdateDto updateDto
     ) throws Exception;
+    @GetMapping("/roomType")
+    ResponseEntity<List<RoomType>> getRoomType() throws Exception;
+    @GetMapping("/roomCategory")
+    ResponseEntity<List<RoomCategory>> getRoomCategory() throws Exception;
 }

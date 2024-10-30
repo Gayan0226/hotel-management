@@ -2,6 +2,8 @@ package com.hotelManagementSystem.hotel.controller.impl;
 
 import com.hotelManagementSystem.hotel.controller.RoomController;
 import com.hotelManagementSystem.hotel.model.Room;
+import com.hotelManagementSystem.hotel.model.enums.RoomCategory;
+import com.hotelManagementSystem.hotel.model.enums.RoomType;
 import com.hotelManagementSystem.hotel.service.RoomService;
 import com.hotelManagementSystem.hotel.util.generics.controller.impl.CommonControllerImpl;
 import com.hotelManagementSystem.hotel.util.generics.dto.room.RoomSaveDto;
@@ -47,5 +49,15 @@ public class RoomControllerImpl extends CommonControllerImpl<Room, Integer, Room
     @Override
     public ResponseEntity<String> updateAvailability(int id, RoomUpdateDto updateDto) throws Exception {
         return new ResponseEntity<String>(service.updateRoomDetails(updateDto, id), HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<List<RoomType>> getRoomType() throws Exception {
+        return new ResponseEntity<List<RoomType>>(service.getRoomType(),HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<List<RoomCategory>> getRoomCategory() throws Exception {
+        return new ResponseEntity<List<RoomCategory>>(service.getRoomCategory(),HttpStatus.OK);
     }
 }

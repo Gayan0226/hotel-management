@@ -1,6 +1,8 @@
 package com.hotelManagementSystem.hotel.service;
 
 import com.hotelManagementSystem.hotel.model.Room;
+import com.hotelManagementSystem.hotel.model.enums.RoomCategory;
+import com.hotelManagementSystem.hotel.model.enums.RoomType;
 import com.hotelManagementSystem.hotel.util.generics.dto.room.RoomSaveDto;
 import com.hotelManagementSystem.hotel.util.generics.dto.room.RoomUpdateDto;
 import com.hotelManagementSystem.hotel.util.generics.service.CommonService;
@@ -22,4 +24,8 @@ public interface RoomService extends CommonService<Room, Integer> {
     String updateAvailability(int id, boolean available);
 
     String updateRoomDetails(RoomUpdateDto updateDto, int id);
+
+    List<RoomType> getRoomType();
+
+    List<RoomCategory> getRoomCategory();
 }
