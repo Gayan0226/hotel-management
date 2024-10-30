@@ -37,8 +37,9 @@ public class CommonServiceImpl<T, ID, R extends CommonRepository<T, ID>> impleme
 
     @Override
     public T deleteById(ID id) {
-        log.info("Deleted All Details By ID : {}",id);
-        return repository.findById(id).orElseThrow(() -> new NotFoundException("Delete Failed"));
+        T deleteFailed = repository.findById(id).orElseThrow(() -> new NotFoundException("Delete Failed"));
+        repository.delete(deleteFailed);
+        return deleteFailed;
     }
 
 

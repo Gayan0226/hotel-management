@@ -2,6 +2,7 @@ package com.hotelManagementSystem.hotel.service.impl;
 
 import com.hotelManagementSystem.hotel.exception.NotFoundException;
 import com.hotelManagementSystem.hotel.model.Room;
+import com.hotelManagementSystem.hotel.model.enums.RoomCategory;
 import com.hotelManagementSystem.hotel.service.RoomService;
 import com.hotelManagementSystem.hotel.util.generics.dto.room.RoomSaveDto;
 import com.hotelManagementSystem.hotel.util.generics.dto.room.RoomUpdateDto;

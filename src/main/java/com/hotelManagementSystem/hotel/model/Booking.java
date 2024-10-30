@@ -1,6 +1,7 @@
 package com.hotelManagementSystem.hotel.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -27,7 +28,7 @@ public class Booking {
     @OneToOne
     @JoinColumn(name = "roomId")
     private Room room;
-    @JsonBackReference
+    @JsonBackReference(value="customer")
     @ManyToOne
     @JoinColumn(name = "customerId")
     private Customer customer;
@@ -35,7 +36,6 @@ public class Booking {
     private LocalDateTime createTime;
     @Column(name = "updateTime")
     private LocalDateTime updateTime;
-
     @PrePersist
     protected void onCreateTime() {
         if (createTime == null) {

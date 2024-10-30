@@ -10,10 +10,13 @@ import com.hotelManagementSystem.hotel.service.RoomService;
 import com.hotelManagementSystem.hotel.util.generics.dto.booking.BookingSaveDto;
 import com.hotelManagementSystem.hotel.util.generics.repository.BookingRepository;
 import com.hotelManagementSystem.hotel.util.generics.service.impl.CommonServiceImpl;
+import jakarta.transaction.Transactional;
+import org.modelmapper.internal.bytebuddy.asm.Advice;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -61,12 +64,37 @@ public class BookingServiceImpl extends CommonServiceImpl<Booking, Integer, Book
                     customerDetails
             );
             repository.save(bookingSave);
-            roomService.updateAvailability(roomDetails.getRoomId(),false);
+            roomService.updateAvailability(roomDetails.getRoomId(), false);
             log.info("Booking Saved Successfully ");
-
             return bookingSave;
         } else {
             throw new NotFoundException(" Details Mismatch");
         }
+    }
+
+    @Override
+    public Booking changeInOutDate(LocalDate inDate, LocalDate outDate, int bookingId) {
+        Booking booking = repository.findById(bookingId).orElseThrow(() -> new NotFoundException("Not Found Booking Data For This ID: " + bookingId));
+        booking.setInDate(inDate);
+        booking.setOutDate(outDate);
+        return repository.save(booking);
+    }
+
+    @Override
+    public Booking extendOutdate(LocalDate outDate, int bookingId) {
+        Booking booking = repository.findById(bookingId).orElseThrow(() -> new NotFoundException("Not Found Booking Data For This ID: " + bookingId));
+        booking.setOutDate(outDate);
+        return repository.save(booking);
+    }
+
+    @Transactional
+    @Override
+    public Booking cancelBooking(Integer id) {
+        Booking booking = repository.findById(id).orElseThrow(() -> new NotFoundException("Not Found Booking Details"));
+        if(booking!=null){
+            repository.deleteByIdNative(id);
+        }
+       return booking;
+
     }
 }

@@ -4,6 +4,7 @@ import com.hotelManagementSystem.hotel.model.Customer;
 import com.hotelManagementSystem.hotel.util.generics.dto.booking.BookingSaveDto;
 import com.hotelManagementSystem.hotel.util.generics.service.CommonService;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public interface BookingService extends CommonService<Booking, Integer> {
@@ -17,4 +18,10 @@ public interface BookingService extends CommonService<Booking, Integer> {
 
 
     Booking saveBookingDetails(BookingSaveDto bookingSaveDto);
+
+    Booking changeInOutDate(LocalDate inDate, LocalDate outDate, int bookingId);
+
+    Booking extendOutdate(LocalDate outDate, int bookingId);
+
+    Booking cancelBooking(Integer id);
 }
