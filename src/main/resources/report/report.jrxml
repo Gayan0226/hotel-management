@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HotelManegement" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1042346d-0a8a-4b12-9ed5-5db4a525f1ea">
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="121" splitType="Stretch">
+            <staticText>
+                <reportElement x="140" y="0" width="292" height="52" uuid="b6261cd8-bffa-4856-8b3d-8a904df6d17d"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Algerian" size="27" isBold="true"/>
+                </textElement>
+                <text><![CDATA[The Family Crest Hotel]]></text>
+            </staticText>
+            <textField pattern="MMM d, yyyy h:mm:ss a">
+                <reportElement x="80" y="59" width="120" height="20" uuid="bb1f95df-6a38-4735-bbb8-016d76ff7358"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Serif" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="0" y="60" width="95" height="19" uuid="bd0eee39-8d68-418d-9387-9115e0fb7fff"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="13"/>
+                </textElement>
+                <text><![CDATA[Created Time :]]></text>
+            </staticText>
+            <rectangle>
+                <reportElement x="-10" y="100" width="570" height="1" forecolor="#6B1B1A" uuid="a7d33d41-4706-4ee5-b18c-2cda5a08c4fe"/>
+            </rectangle>
+            <staticText>
+                <reportElement x="270" y="22" width="220" height="30" uuid="ad04a422-4afa-468e-97f3-bba68106d012"/>
+                <textElement textAlignment="Center" verticalAlignment="Bottom">
+                    <font fontName="Algerian" size="12"/>
+                </textElement>
+                <text><![CDATA[Arrive as Guests, Leave as Family]]></text>
+            </staticText>
+        </band>
+    </title>
+    <columnHeader>
+        <band height="45" splitType="Stretch"/>
+    </columnHeader>
+    <detail>
+        <band height="48" splitType="Stretch"/>
+    </detail>
+    <pageFooter>
+        <band height="54" splitType="Stretch">
+            <textField>
+                <reportElement x="230" y="20" width="100" height="30" uuid="ca6f2932-b865-48e3-9b59-5446e8a1efc9"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="10" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+</jasperReport>

@@ -95,6 +95,5 @@ public class BookingServiceImpl extends CommonServiceImpl<Booking, Integer, Book
             repository.deleteByIdNative(id);
         }
         return booking;
-
     }
 }
