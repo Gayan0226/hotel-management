@@ -4,6 +4,9 @@ import com.hotelManagementSystem.hotel.controller.BookingController;
 import com.hotelManagementSystem.hotel.model.Booking;
 import com.hotelManagementSystem.hotel.service.BookingService;
 import com.hotelManagementSystem.hotel.util.generics.controller.impl.CommonControllerImpl;
+import com.hotelManagementSystem.hotel.util.generics.dto.booking.BookingSaveDto;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,6 +36,11 @@ public class BookingControllerImpl extends CommonControllerImpl<Booking,Integer,
     @Override
     public ResponseEntity<Booking> delete(Integer integer) throws Exception {
         return super.delete(integer);
+    }
+
+    @Override
+    public ResponseEntity<Booking> addBooking(BookingSaveDto bookingSaveDto) throws Exception {
+        return new ResponseEntity<Booking>(service.saveBookingDetails(bookingSaveDto), HttpStatus.OK);
     }
 
     public BookingControllerImpl(BookingService service) {
