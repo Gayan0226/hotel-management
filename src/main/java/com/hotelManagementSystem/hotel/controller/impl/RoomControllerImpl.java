@@ -19,10 +19,6 @@ import java.util.List;
 @RequestMapping("/room")
 @CrossOrigin
 public class RoomControllerImpl extends CommonControllerImpl<Room, Integer, RoomService> implements RoomController {
-    @Override
-    public ResponseEntity<Room> update(Room room, Integer integer) throws Exception {
-        return super.update(room, integer);
-    }
 
     @Override
     public ResponseEntity<Room> delete(Integer integer) throws Exception {

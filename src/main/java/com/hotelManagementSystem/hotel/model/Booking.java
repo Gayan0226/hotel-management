@@ -1,7 +1,7 @@
 package com.hotelManagementSystem.hotel.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,11 +24,11 @@ public class Booking {
     private LocalDate outDate;
     @Column(name = "inDate")
     private LocalDate inDate;
-    @JsonBackReference(value = "roomBooking")
+    @JsonManagedReference(value = "roomBooking")
     @OneToOne
-    @JoinColumn(name = "roomId")
+    @JoinColumn(name = "roomId",referencedColumnName = "roomId")
     private Room room;
-    @JsonBackReference(value="customer")
+    @JsonManagedReference(value="customer")
     @ManyToOne
     @JoinColumn(name = "customerId")
     private Customer customer;
@@ -42,7 +42,6 @@ public class Booking {
             createTime = LocalDateTime.now();
         }
     }
-
     @PreUpdate
     protected void onUpdateTime() {
         if (updateTime == null || updateTime.isBefore(LocalDateTime.now())) {

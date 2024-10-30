@@ -17,9 +17,6 @@ public interface CustomerController extends CommonController<Customer, Integer> 
     @GetMapping("/findById/{id}")
     ResponseEntity<Customer> findById(@PathVariable("id") Integer id) throws Exception;
 
-    @PutMapping("/updateAllData")
-    ResponseEntity<Customer> update(Customer t, Integer id) throws Exception;
-
     @DeleteMapping("/delete/{id}")
     ResponseEntity<Customer> delete(@PathVariable("id") Integer id) throws Exception;
 

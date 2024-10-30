@@ -30,10 +30,6 @@ public class CustomerControllerImpl extends CommonControllerImpl<Customer, Integ
         return super.findById(integer);
     }
 
-    @Override
-    public ResponseEntity<Customer> update(Customer customer, Integer integer) throws Exception {
-        return super.update(customer, integer);
-    }
 
     @Override
     public ResponseEntity<Customer> delete(Integer integer) throws Exception {

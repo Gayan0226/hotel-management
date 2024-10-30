@@ -11,7 +11,6 @@ import com.hotelManagementSystem.hotel.util.generics.dto.booking.BookingSaveDto;
 import com.hotelManagementSystem.hotel.util.generics.repository.BookingRepository;
 import com.hotelManagementSystem.hotel.util.generics.service.impl.CommonServiceImpl;
 import jakarta.transaction.Transactional;
-import org.modelmapper.internal.bytebuddy.asm.Advice;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -51,6 +50,7 @@ public class BookingServiceImpl extends CommonServiceImpl<Booking, Integer, Book
         return super.deleteById(integer);
     }
 
+    @Transactional
     @Override
     public Booking saveBookingDetails(BookingSaveDto bookingSaveDto) {
         Room roomDetails = roomService.findDetailsById(bookingSaveDto.getRoomId());
@@ -87,14 +87,14 @@ public class BookingServiceImpl extends CommonServiceImpl<Booking, Integer, Book
         return repository.save(booking);
     }
 
-    @Transactional
     @Override
     public Booking cancelBooking(Integer id) {
         Booking booking = repository.findById(id).orElseThrow(() -> new NotFoundException("Not Found Booking Details"));
-        if(booking!=null){
+        if (booking != null) {
+            roomService.updateAvailability(booking.getRoom().getRoomId(), true);
             repository.deleteByIdNative(id);
         }
-       return booking;
+        return booking;
 
     }
 }

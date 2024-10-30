@@ -17,9 +17,6 @@ public interface RoomController extends CommonController<Room, Integer> {
     @GetMapping("/findById/{id}")
     ResponseEntity<Room> findById(@PathVariable("id") Integer id) throws Exception;
 
-    @PutMapping("/updateAllData")
-    ResponseEntity<Room> update(Room t, Integer id) throws Exception;
-
     @DeleteMapping("/delete/{id}")
     ResponseEntity<Room> delete(@PathVariable("id") Integer id) throws Exception;
 
