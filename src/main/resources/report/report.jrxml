@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HotelManegement" pageWidth="900" pageHeight="842" columnWidth="860" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1042346d-0a8a-4b12-9ed5-5db4a525f1ea">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HotelManegement" pageWidth="850" pageHeight="700" columnWidth="810" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1042346d-0a8a-4b12-9ed5-5db4a525f1ea">
     <queryString>
         <![CDATA[]]>
     </queryString>
@@ -16,16 +16,16 @@
     <title>
         <band height="109" splitType="Stretch">
             <staticText>
-                <reportElement x="269" y="0" width="292" height="52" uuid="b6261cd8-bffa-4856-8b3d-8a904df6d17d"/>
+                <reportElement x="156" y="-11" width="448" height="67" uuid="b6261cd8-bffa-4856-8b3d-8a904df6d17d"/>
                 <textElement textAlignment="Center">
-                    <font fontName="Algerian" size="27" isBold="true"/>
+                    <font fontName="Serif" size="40" isBold="true"/>
                 </textElement>
                 <text><![CDATA[The Family Crest Hotel]]></text>
             </staticText>
             <textField pattern="MMM d, yyyy h:mm:ss a">
                 <reportElement x="80" y="59" width="120" height="20" uuid="bb1f95df-6a38-4735-bbb8-016d76ff7358"/>
                 <textElement textAlignment="Center" verticalAlignment="Middle">
-                    <font fontName="Serif" size="12"/>
+                    <font fontName="Serif" size="12" isBold="true"/>
                 </textElement>
                 <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
             </textField>
@@ -40,12 +40,19 @@
                 <reportElement x="0" y="100" width="801" height="1" forecolor="#6B1B1A" uuid="a7d33d41-4706-4ee5-b18c-2cda5a08c4fe"/>
             </rectangle>
             <staticText>
-                <reportElement x="399" y="22" width="220" height="30" uuid="ad04a422-4afa-468e-97f3-bba68106d012"/>
+                <reportElement x="403" y="32" width="291" height="30" uuid="ad04a422-4afa-468e-97f3-bba68106d012"/>
                 <textElement textAlignment="Center" verticalAlignment="Bottom">
-                    <font fontName="Algerian" size="12"/>
+                    <font fontName="Serif" size="18"/>
                 </textElement>
-                <text><![CDATA[Arrive as Guests, Leave as Family]]></text>
+                <text><![CDATA[Arrive as Guests, Leave as Family ...]]></text>
             </staticText>
+            <textField evaluationTime="Report">
+                <reportElement x="681" y="62" width="120" height="17" uuid="eba8aede-1788-4da3-8ac9-ca672c52474d"/>
+                <textElement textAlignment="Center" verticalAlignment="Bottom">
+                    <font size="12" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Total Page : "+$V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
         </band>
     </title>
     <columnHeader>
@@ -167,7 +174,7 @@
     <pageFooter>
         <band height="39" splitType="Stretch">
             <textField>
-                <reportElement x="381" y="4" width="100" height="30" uuid="ca6f2932-b865-48e3-9b59-5446e8a1efc9"/>
+                <reportElement x="352" y="4" width="100" height="30" uuid="ca6f2932-b865-48e3-9b59-5446e8a1efc9"/>
                 <textElement textAlignment="Center" verticalAlignment="Middle">
                     <font size="10" isBold="true"/>
                 </textElement>
