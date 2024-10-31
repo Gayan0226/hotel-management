@@ -3,6 +3,7 @@ package com.hotelManagementSystem.hotel.service;
 import com.hotelManagementSystem.hotel.model.Room;
 import com.hotelManagementSystem.hotel.model.enums.RoomCategory;
 import com.hotelManagementSystem.hotel.model.enums.RoomType;
+import com.hotelManagementSystem.hotel.util.generics.dto.room.AvailableRoomDetails;
 import com.hotelManagementSystem.hotel.util.generics.dto.room.RoomSaveDto;
 import com.hotelManagementSystem.hotel.util.generics.dto.room.RoomUpdateDto;
 import com.hotelManagementSystem.hotel.util.generics.service.CommonService;
@@ -28,4 +29,6 @@ public interface RoomService extends CommonService<Room, Integer> {
     List<RoomType> getRoomType();
 
     List<RoomCategory> getRoomCategory();
+
+    List<AvailableRoomDetails> getAvailableRoomDetails(boolean status);
 }

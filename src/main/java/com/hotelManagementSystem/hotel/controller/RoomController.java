@@ -4,6 +4,7 @@ import com.hotelManagementSystem.hotel.model.Room;
 import com.hotelManagementSystem.hotel.model.enums.RoomCategory;
 import com.hotelManagementSystem.hotel.model.enums.RoomType;
 import com.hotelManagementSystem.hotel.util.generics.controller.CommonController;
+import com.hotelManagementSystem.hotel.util.generics.dto.room.AvailableRoomDetails;
 import com.hotelManagementSystem.hotel.util.generics.dto.room.RoomSaveDto;
 import com.hotelManagementSystem.hotel.util.generics.dto.room.RoomUpdateDto;
 import org.springframework.http.ResponseEntity;
@@ -39,8 +40,13 @@ public interface RoomController extends CommonController<Room, Integer> {
             @PathVariable("id") int id,
             @RequestBody RoomUpdateDto updateDto
     ) throws Exception;
+
     @GetMapping("/roomType")
     ResponseEntity<List<RoomType>> getRoomType() throws Exception;
+
     @GetMapping("/roomCategory")
     ResponseEntity<List<RoomCategory>> getRoomCategory() throws Exception;
+
+    @GetMapping("/availableRoom/{status}")
+    ResponseEntity<List<AvailableRoomDetails>> getRoomAvailable(@PathVariable("status")boolean status) throws Exception;
 }

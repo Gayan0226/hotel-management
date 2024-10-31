@@ -6,6 +6,7 @@ import com.hotelManagementSystem.hotel.model.enums.RoomCategory;
 import com.hotelManagementSystem.hotel.model.enums.RoomType;
 import com.hotelManagementSystem.hotel.service.RoomService;
 import com.hotelManagementSystem.hotel.util.generics.controller.impl.CommonControllerImpl;
+import com.hotelManagementSystem.hotel.util.generics.dto.room.AvailableRoomDetails;
 import com.hotelManagementSystem.hotel.util.generics.dto.room.RoomSaveDto;
 import com.hotelManagementSystem.hotel.util.generics.dto.room.RoomUpdateDto;
 import org.apache.coyote.Response;
@@ -59,5 +60,10 @@ public class RoomControllerImpl extends CommonControllerImpl<Room, Integer, Room
     @Override
     public ResponseEntity<List<RoomCategory>> getRoomCategory() throws Exception {
         return new ResponseEntity<List<RoomCategory>>(service.getRoomCategory(),HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<List<AvailableRoomDetails>> getRoomAvailable(boolean status) throws Exception {
+        return new ResponseEntity<List<AvailableRoomDetails>>(service.getAvailableRoomDetails(status),HttpStatus.OK);
     }
 }
