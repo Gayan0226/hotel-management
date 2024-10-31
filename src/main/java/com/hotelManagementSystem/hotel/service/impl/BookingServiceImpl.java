@@ -18,9 +18,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.time.LocalDate;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -63,11 +63,11 @@ public class BookingServiceImpl extends CommonServiceImpl<Booking, Integer, Book
         Room roomDetails = roomService.findDetailsById(bookingSaveDto.getRoomId());
         Customer customerDetails = customerService.findDetailsById(bookingSaveDto.getCustomerId());
         if (roomDetails.isRoomAvailable() && customerDetails != null) {
-            log.info("Customer ;{} And Room : {} Available ", customerDetails.getCustomerName(), roomDetails.getRoomId());
             Booking bookingSave = new Booking(bookingSaveDto.getOutDate(), bookingSaveDto.getInDate(), roomDetails, customerDetails);
             repository.save(bookingSave);
+            log.info("Saved Successful : {}", bookingSave);
             roomService.updateAvailability(roomDetails.getRoomId(), false);
-            log.info("Booking Saved Successfully ");
+            log.info("Update Availability Successful Room : {}", bookingSave.getRoom().getRoomId());
             return bookingSave;
         } else {
             throw new NotFoundException(" Details Mismatch");
@@ -102,7 +102,6 @@ public class BookingServiceImpl extends CommonServiceImpl<Booking, Integer, Book
     @Transactional
     @Override
     public byte[] generatePdf() throws JRException {
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         List<PdfReportData> detailsToReport = repository.findAll()
                 .stream().map(booking -> new PdfReportData(
                         booking.getCustomer().getCustomerName(),
@@ -119,5 +118,17 @@ public class BookingServiceImpl extends CommonServiceImpl<Booking, Integer, Book
         Map<String, Object> parameters = new HashMap<>();
         JasperPrint printReport = JasperFillManager.fillReport(report, parameters, detailsReportBean);
         return JasperExportManager.exportReportToPdf(printReport);
+    }
+
+    @Override
+    public List<Booking> checkBookingExpired() {
+        LocalDate checkDate = LocalDate.now();
+        List<Booking> bookingExpired = repository.checkExpiredDate(checkDate);
+        if (!bookingExpired.isEmpty()) {
+            return bookingExpired;
+        }
+       else {
+            return Collections.emptyList();
+        }
     }
 }
