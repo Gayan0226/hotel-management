@@ -6,8 +6,7 @@ import com.hotelManagementSystem.hotel.service.BookingService;
 import com.hotelManagementSystem.hotel.util.generics.controller.impl.CommonControllerImpl;
 import com.hotelManagementSystem.hotel.util.generics.dto.booking.BookingSaveDto;
 import com.hotelManagementSystem.hotel.util.generics.repository.BookingRepository;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -55,6 +54,14 @@ public class BookingControllerImpl extends CommonControllerImpl<Booking, Integer
     @Override
     public ResponseEntity<Booking> extendOutDate(int bookingId, LocalDate outDate) throws Exception {
         return new ResponseEntity<Booking>(service.extendOutdate(outDate, bookingId), HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<byte[]> getDetailsAsPdf() throws Exception {
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.setContentType(MediaType.APPLICATION_PDF);
+        httpHeaders.setContentDisposition(ContentDisposition.inline().filename("Report.pdf").build());
+        return  new ResponseEntity<byte[]>(service.generatePdf(),httpHeaders,HttpStatus.OK) ;
     }
 
     public BookingControllerImpl(BookingService service) {

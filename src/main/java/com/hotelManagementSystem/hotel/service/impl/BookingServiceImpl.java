@@ -8,15 +8,22 @@ import com.hotelManagementSystem.hotel.service.BookingService;
 import com.hotelManagementSystem.hotel.service.CustomerService;
 import com.hotelManagementSystem.hotel.service.RoomService;
 import com.hotelManagementSystem.hotel.util.generics.dto.booking.BookingSaveDto;
+import com.hotelManagementSystem.hotel.util.generics.dto.report.PdfReportData;
 import com.hotelManagementSystem.hotel.util.generics.repository.BookingRepository;
 import com.hotelManagementSystem.hotel.util.generics.service.impl.CommonServiceImpl;
 import jakarta.transaction.Transactional;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class BookingServiceImpl extends CommonServiceImpl<Booking, Integer, BookingRepository> implements BookingService {
@@ -57,12 +64,7 @@ public class BookingServiceImpl extends CommonServiceImpl<Booking, Integer, Book
         Customer customerDetails = customerService.findDetailsById(bookingSaveDto.getCustomerId());
         if (roomDetails.isRoomAvailable() && customerDetails != null) {
             log.info("Customer ;{} And Room : {} Available ", customerDetails.getCustomerName(), roomDetails.getRoomId());
-            Booking bookingSave = new Booking(
-                    bookingSaveDto.getOutDate(),
-                    bookingSaveDto.getInDate(),
-                    roomDetails,
-                    customerDetails
-            );
+            Booking bookingSave = new Booking(bookingSaveDto.getOutDate(), bookingSaveDto.getInDate(), roomDetails, customerDetails);
             repository.save(bookingSave);
             roomService.updateAvailability(roomDetails.getRoomId(), false);
             log.info("Booking Saved Successfully ");
@@ -95,5 +97,27 @@ public class BookingServiceImpl extends CommonServiceImpl<Booking, Integer, Book
             repository.deleteByIdNative(id);
         }
         return booking;
+    }
+
+    @Transactional
+    @Override
+    public byte[] generatePdf() throws JRException {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        List<PdfReportData> detailsToReport = repository.findAll()
+                .stream().map(booking -> new PdfReportData(
+                        booking.getCustomer().getCustomerName(),
+                        booking.getCustomer().getContactNumber(),
+                        booking.getCustomer().getIdNumber(),
+                        booking.getRoom().getRoomId(),
+                        booking.getInDate(),
+                        booking.getOutDate()
+                )).toList();
+
+        InputStream resource = this.getClass().getResourceAsStream("/report/report.jrxml");
+        JasperReport report = JasperCompileManager.compileReport(resource);
+        JRBeanCollectionDataSource detailsReportBean = new JRBeanCollectionDataSource(detailsToReport);
+        Map<String, Object> parameters = new HashMap<>();
+        JasperPrint printReport = JasperFillManager.fillReport(report, parameters, detailsReportBean);
+        return JasperExportManager.exportReportToPdf(printReport);
     }
 }

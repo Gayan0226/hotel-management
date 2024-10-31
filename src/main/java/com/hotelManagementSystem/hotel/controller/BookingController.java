@@ -25,7 +25,7 @@ public interface BookingController extends CommonController<Booking, Integer> {
 
     @PatchMapping(
             path = {"/updateBookingDate/bookingId/{id}"},
-            params = {"inDate","outDate"}
+            params = {"inDate", "outDate"}
     )
     ResponseEntity<Booking> changeInAndOutDate(
             @PathVariable("id") int bookingId,
@@ -42,4 +42,6 @@ public interface BookingController extends CommonController<Booking, Integer> {
             @RequestParam(value = "outDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate outDate
     ) throws Exception;
 
+    @GetMapping("/generatePdf")
+    ResponseEntity<byte[]> getDetailsAsPdf() throws Exception;
 }

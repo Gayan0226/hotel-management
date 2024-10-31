@@ -3,6 +3,7 @@ import com.hotelManagementSystem.hotel.model.Booking;
 import com.hotelManagementSystem.hotel.model.Customer;
 import com.hotelManagementSystem.hotel.util.generics.dto.booking.BookingSaveDto;
 import com.hotelManagementSystem.hotel.util.generics.service.CommonService;
+import net.sf.jasperreports.engine.JRException;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -24,4 +25,6 @@ public interface BookingService extends CommonService<Booking, Integer> {
     Booking extendOutdate(LocalDate outDate, int bookingId);
 
     Booking cancelBooking(Integer id);
+
+    byte[] generatePdf() throws JRException;
 }
