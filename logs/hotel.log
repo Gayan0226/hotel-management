@@ -1,0 +1,288 @@
+2024-05-31  16:05:29 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Starting HotelApplication using Java 17.0.12 with PID 10720 (E:\SpringBootP\HotelMangementMicroService\hotel-management\target\classes started by Gyan  chathuranaga in E:\SpringBootP\HotelMangementMicroService\hotel-management)
+2024-05-31  16:05:29 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplication -  No active profile set, falling back to 1 default profile: "default"
+2024-05-31  16:05:30 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-31  16:05:30 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 52 ms. Found 3 JPA repository interfaces.
+2024-05-31  16:05:31 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat initialized with port 8081 (http)
+2024-05-31  16:05:31 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Initializing ProtocolHandler ["http-nio-8081"]
+2024-05-31  16:05:31 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Starting service [Tomcat]
+2024-05-31  16:05:31 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardEngine -  Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-05-31  16:05:31 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring embedded WebApplicationContext
+2024-05-31  16:05:31 [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -  Root WebApplicationContext: initialization completed in 1033 ms
+2024-05-31  16:05:31 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-31  16:05:31 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-05-31  16:05:31 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
+2024-05-31  16:05:31 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-31  16:05:31 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
+2024-05-31  16:05:31 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@68f2363
+2024-05-31  16:05:31 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
+2024-05-31  16:05:31 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-31  16:05:31 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-05-31  16:05:32 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-31  16:05:32 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-31  16:05:32 [main] org.springframework.data.jpa.repository.query.QueryEnhancerFactory INFO  o.s.d.j.r.query.QueryEnhancerFactory -  Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-31  16:05:32 [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-31  16:05:33 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Starting ProtocolHandler ["http-nio-8081"]
+2024-05-31  16:05:33 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat started on port 8081 (http) with context path '/'
+2024-05-31  16:05:33 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Started HotelApplication in 3.777 seconds (process running for 4.507)
+2024-05-31  16:05:33 [scheduling-1] com.hotelManagementSystem.hotel.schedular.RoomAvailableUpdateBeforeEndDate INFO  c.h.h.s.RoomAvailableUpdateBeforeEndDate -  Start Scheduler For Checked Expired report !
+2024-05-31  16:05:33 [scheduling-1] com.hotelManagementSystem.hotel.schedular.RoomAvailableUpdateBeforeEndDate INFO  c.h.h.s.RoomAvailableUpdateBeforeEndDate -  Get The Expired Details Of Booking  !
+2024-07-31  16:07:57 [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-31  16:07:57 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown initiated...
+2024-07-31  16:07:57 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown completed.
+2024-10-31  16:10:51 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Starting HotelApplication using Java 17.0.12 with PID 7084 (E:\SpringBootP\HotelMangementMicroService\hotel-management\target\classes started by Gyan  chathuranaga in E:\SpringBootP\HotelMangementMicroService\hotel-management)
+2024-10-31  16:10:51 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplication -  No active profile set, falling back to 1 default profile: "default"
+2024-10-31  16:10:51 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-31  16:10:51 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+2024-10-31  16:10:52 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat initialized with port 8081 (http)
+2024-10-31  16:10:52 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Initializing ProtocolHandler ["http-nio-8081"]
+2024-10-31  16:10:52 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Starting service [Tomcat]
+2024-10-31  16:10:52 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardEngine -  Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-31  16:10:52 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring embedded WebApplicationContext
+2024-10-31  16:10:52 [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -  Root WebApplicationContext: initialization completed in 1016 ms
+2024-10-31  16:10:52 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-31  16:10:52 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-31  16:10:52 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
+2024-10-31  16:10:52 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-31  16:10:52 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
+2024-10-31  16:10:52 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d978ab9
+2024-10-31  16:10:52 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
+2024-10-31  16:10:52 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-31  16:10:52 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-10-31  16:10:53 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-31  16:10:53 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-31  16:10:53 [main] org.springframework.data.jpa.repository.query.QueryEnhancerFactory INFO  o.s.d.j.r.query.QueryEnhancerFactory -  Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-31  16:10:54 [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-31  16:10:54 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Starting ProtocolHandler ["http-nio-8081"]
+2024-10-31  16:10:54 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat started on port 8081 (http) with context path '/'
+2024-10-31  16:10:54 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Started HotelApplication in 3.576 seconds (process running for 4.259)
+2024-10-31  16:10:54 [scheduling-1] com.hotelManagementSystem.hotel.schedular.RoomAvailableUpdateBeforeEndDate INFO  c.h.h.s.RoomAvailableUpdateBeforeEndDate -  Start Scheduler For Checked Expired report !
+2024-10-31  16:10:54 [scheduling-1] com.hotelManagementSystem.hotel.schedular.RoomAvailableUpdateBeforeEndDate INFO  c.h.h.s.RoomAvailableUpdateBeforeEndDate -  Get The Expired Details Of Booking  !
+2024-12-31  16:12:40 [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-31  16:12:40 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown initiated...
+2024-12-31  16:12:40 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown completed.
+2024-12-31  16:12:42 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Starting HotelApplication using Java 17.0.12 with PID 9368 (E:\SpringBootP\HotelMangementMicroService\hotel-management\target\classes started by Gyan  chathuranaga in E:\SpringBootP\HotelMangementMicroService\hotel-management)
+2024-12-31  16:12:42 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplication -  No active profile set, falling back to 1 default profile: "default"
+2024-12-31  16:12:42 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-31  16:12:42 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
+2024-12-31  16:12:43 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat initialized with port 8081 (http)
+2024-12-31  16:12:43 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Initializing ProtocolHandler ["http-nio-8081"]
+2024-12-31  16:12:43 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Starting service [Tomcat]
+2024-12-31  16:12:43 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardEngine -  Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-12-31  16:12:43 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring embedded WebApplicationContext
+2024-12-31  16:12:43 [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -  Root WebApplicationContext: initialization completed in 1033 ms
+2024-12-31  16:12:43 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-31  16:12:43 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-31  16:12:43 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
+2024-12-31  16:12:43 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-31  16:12:43 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
+2024-12-31  16:12:44 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@48d31d25
+2024-12-31  16:12:44 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
+2024-12-31  16:12:44 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-31  16:12:44 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-31  16:12:44 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-31  16:12:44 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-31  16:12:44 [main] org.springframework.data.jpa.repository.query.QueryEnhancerFactory INFO  o.s.d.j.r.query.QueryEnhancerFactory -  Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-31  16:12:45 [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-31  16:12:45 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Starting ProtocolHandler ["http-nio-8081"]
+2024-12-31  16:12:45 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat started on port 8081 (http) with context path '/'
+2024-12-31  16:12:45 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Started HotelApplication in 3.598 seconds (process running for 4.317)
+2024-12-31  16:12:45 [scheduling-1] com.hotelManagementSystem.hotel.schedular.RoomAvailableUpdateBeforeEndDate INFO  c.h.h.s.RoomAvailableUpdateBeforeEndDate -  Start Scheduler For Checked Expired report !
+2024-12-31  16:12:45 [scheduling-1] com.hotelManagementSystem.hotel.schedular.RoomAvailableUpdateBeforeEndDate INFO  c.h.h.s.RoomAvailableUpdateBeforeEndDate -  Get The Expired Details Of Booking  !
+2024-15-31  16:15:58 [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-15-31  16:15:58 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown initiated...
+2024-15-31  16:15:58 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown completed.
+2024-16-31  16:16:04 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Starting HotelApplication using Java 17.0.12 with PID 18924 (E:\SpringBootP\HotelMangementMicroService\hotel-management\target\classes started by Gyan  chathuranaga in E:\SpringBootP\HotelMangementMicroService\hotel-management)
+2024-16-31  16:16:04 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplication -  No active profile set, falling back to 1 default profile: "default"
+2024-16-31  16:16:04 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-16-31  16:16:04 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+2024-16-31  16:16:05 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat initialized with port 8081 (http)
+2024-16-31  16:16:05 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Initializing ProtocolHandler ["http-nio-8081"]
+2024-16-31  16:16:05 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Starting service [Tomcat]
+2024-16-31  16:16:05 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardEngine -  Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-16-31  16:16:05 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring embedded WebApplicationContext
+2024-16-31  16:16:05 [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -  Root WebApplicationContext: initialization completed in 1012 ms
+2024-16-31  16:16:05 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-16-31  16:16:05 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-16-31  16:16:05 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
+2024-16-31  16:16:05 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-16-31  16:16:05 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
+2024-16-31  16:16:05 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45849604
+2024-16-31  16:16:05 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
+2024-16-31  16:16:06 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-16-31  16:16:06 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-16-31  16:16:06 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-16-31  16:16:06 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-16-31  16:16:06 [main] org.springframework.data.jpa.repository.query.QueryEnhancerFactory INFO  o.s.d.j.r.query.QueryEnhancerFactory -  Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-16-31  16:16:07 [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-16-31  16:16:07 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Starting ProtocolHandler ["http-nio-8081"]
+2024-16-31  16:16:07 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat started on port 8081 (http) with context path '/'
+2024-16-31  16:16:07 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Started HotelApplication in 3.551 seconds (process running for 4.271)
+2024-16-31  16:16:07 [scheduling-1] com.hotelManagementSystem.hotel.schedular.RoomAvailableUpdateBeforeEndDate INFO  c.h.h.s.RoomAvailableUpdateBeforeEndDate -  Start Scheduler For Checked Expired report !
+2024-16-31  16:16:07 [scheduling-1] com.hotelManagementSystem.hotel.schedular.RoomAvailableUpdateBeforeEndDate INFO  c.h.h.s.RoomAvailableUpdateBeforeEndDate -  Get The Expired Details Of Booking  !
+2024-16-31  16:16:08 [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-16-31  16:16:08 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown initiated...
+2024-16-31  16:16:08 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown completed.
+2024-16-31  16:16:11 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Starting HotelApplication using Java 17.0.12 with PID 1960 (E:\SpringBootP\HotelMangementMicroService\hotel-management\target\classes started by Gyan  chathuranaga in E:\SpringBootP\HotelMangementMicroService\hotel-management)
+2024-16-31  16:16:11 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplication -  No active profile set, falling back to 1 default profile: "default"
+2024-16-31  16:16:11 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-16-31  16:16:11 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
+2024-16-31  16:16:12 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat initialized with port 8081 (http)
+2024-16-31  16:16:12 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Initializing ProtocolHandler ["http-nio-8081"]
+2024-16-31  16:16:12 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Starting service [Tomcat]
+2024-16-31  16:16:12 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardEngine -  Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-16-31  16:16:12 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring embedded WebApplicationContext
+2024-16-31  16:16:12 [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -  Root WebApplicationContext: initialization completed in 1048 ms
+2024-16-31  16:16:12 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-16-31  16:16:12 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-16-31  16:16:12 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
+2024-16-31  16:16:12 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-16-31  16:16:12 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
+2024-16-31  16:16:12 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4583b617
+2024-16-31  16:16:12 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
+2024-16-31  16:16:12 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-16-31  16:16:12 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-16-31  16:16:13 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-16-31  16:16:13 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-16-31  16:16:13 [main] org.springframework.data.jpa.repository.query.QueryEnhancerFactory INFO  o.s.d.j.r.query.QueryEnhancerFactory -  Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-16-31  16:16:14 [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-16-31  16:16:14 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Starting ProtocolHandler ["http-nio-8081"]
+2024-16-31  16:16:14 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat started on port 8081 (http) with context path '/'
+2024-16-31  16:16:14 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Started HotelApplication in 3.713 seconds (process running for 4.571)
+2024-16-31  16:16:14 [scheduling-1] com.hotelManagementSystem.hotel.schedular.RoomAvailableUpdateBeforeEndDate INFO  c.h.h.s.RoomAvailableUpdateBeforeEndDate -  Start Scheduler For Checked Expired report !
+2024-16-31  16:16:14 [scheduling-1] com.hotelManagementSystem.hotel.schedular.RoomAvailableUpdateBeforeEndDate INFO  c.h.h.s.RoomAvailableUpdateBeforeEndDate -  Get The Expired Details Of Booking  !
+2024-16-31  16:16:21 [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-16-31  16:16:21 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown initiated...
+2024-16-31  16:16:21 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown completed.
+2024-16-31  16:16:24 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Starting HotelApplication using Java 17.0.12 with PID 18492 (E:\SpringBootP\HotelMangementMicroService\hotel-management\target\classes started by Gyan  chathuranaga in E:\SpringBootP\HotelMangementMicroService\hotel-management)
+2024-16-31  16:16:24 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplication -  No active profile set, falling back to 1 default profile: "default"
+2024-16-31  16:16:25 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-16-31  16:16:25 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
+2024-16-31  16:16:25 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat initialized with port 8081 (http)
+2024-16-31  16:16:25 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Initializing ProtocolHandler ["http-nio-8081"]
+2024-16-31  16:16:25 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Starting service [Tomcat]
+2024-16-31  16:16:25 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardEngine -  Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-16-31  16:16:25 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring embedded WebApplicationContext
+2024-16-31  16:16:25 [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -  Root WebApplicationContext: initialization completed in 999 ms
+2024-16-31  16:16:25 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-16-31  16:16:25 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-16-31  16:16:25 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
+2024-16-31  16:16:25 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-16-31  16:16:25 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
+2024-16-31  16:16:26 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6cbbfe29
+2024-16-31  16:16:26 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
+2024-16-31  16:16:26 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-16-31  16:16:26 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-16-31  16:16:26 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-16-31  16:16:26 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-16-31  16:16:27 [main] org.springframework.data.jpa.repository.query.QueryEnhancerFactory INFO  o.s.d.j.r.query.QueryEnhancerFactory -  Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-16-31  16:16:27 [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-16-31  16:16:27 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Starting ProtocolHandler ["http-nio-8081"]
+2024-16-31  16:16:27 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat started on port 8081 (http) with context path '/'
+2024-16-31  16:16:27 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Started HotelApplication in 3.658 seconds (process running for 4.467)
+2024-16-31  16:16:27 [scheduling-1] com.hotelManagementSystem.hotel.schedular.RoomAvailableUpdateBeforeEndDate INFO  c.h.h.s.RoomAvailableUpdateBeforeEndDate -  Start Scheduler For Checked Expired report !
+2024-16-31  16:16:27 [scheduling-1] com.hotelManagementSystem.hotel.schedular.RoomAvailableUpdateBeforeEndDate INFO  c.h.h.s.RoomAvailableUpdateBeforeEndDate -  Get The Expired Details Of Booking  !
+2024-16-31  16:16:45 [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-16-31  16:16:45 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown initiated...
+2024-16-31  16:16:45 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown completed.
+2024-16-31  16:16:47 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Starting HotelApplication using Java 17.0.12 with PID 9696 (E:\SpringBootP\HotelMangementMicroService\hotel-management\target\classes started by Gyan  chathuranaga in E:\SpringBootP\HotelMangementMicroService\hotel-management)
+2024-16-31  16:16:47 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplication -  No active profile set, falling back to 1 default profile: "default"
+2024-16-31  16:16:48 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-16-31  16:16:48 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
+2024-16-31  16:16:48 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat initialized with port 8081 (http)
+2024-16-31  16:16:48 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Initializing ProtocolHandler ["http-nio-8081"]
+2024-16-31  16:16:48 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Starting service [Tomcat]
+2024-16-31  16:16:48 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardEngine -  Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-16-31  16:16:48 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring embedded WebApplicationContext
+2024-16-31  16:16:48 [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -  Root WebApplicationContext: initialization completed in 1026 ms
+2024-16-31  16:16:48 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-16-31  16:16:49 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-16-31  16:16:49 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
+2024-16-31  16:16:49 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-16-31  16:16:49 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
+2024-16-31  16:16:49 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6fdc2db6
+2024-16-31  16:16:49 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
+2024-16-31  16:16:49 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-16-31  16:16:49 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-16-31  16:16:50 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-16-31  16:16:50 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-16-31  16:16:50 [main] org.springframework.data.jpa.repository.query.QueryEnhancerFactory INFO  o.s.d.j.r.query.QueryEnhancerFactory -  Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-16-31  16:16:50 [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-16-31  16:16:51 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Starting ProtocolHandler ["http-nio-8081"]
+2024-16-31  16:16:51 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat started on port 8081 (http) with context path '/'
+2024-16-31  16:16:51 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Started HotelApplication in 3.591 seconds (process running for 4.262)
+2024-16-31  16:16:51 [scheduling-1] com.hotelManagementSystem.hotel.schedular.RoomAvailableUpdateBeforeEndDate INFO  c.h.h.s.RoomAvailableUpdateBeforeEndDate -  Start Scheduler For Checked Expired report !
+2024-16-31  16:16:51 [scheduling-1] com.hotelManagementSystem.hotel.schedular.RoomAvailableUpdateBeforeEndDate INFO  c.h.h.s.RoomAvailableUpdateBeforeEndDate -  Get The Expired Details Of Booking  !
+2024-18-31  16:18:27 [http-nio-8081-exec-1] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-18-31  16:18:27 [http-nio-8081-exec-1] org.springframework.web.servlet.FrameworkServlet INFO  o.s.web.servlet.DispatcherServlet -  Initializing Servlet 'dispatcherServlet'
+2024-18-31  16:18:27 [http-nio-8081-exec-1] org.springframework.web.servlet.FrameworkServlet INFO  o.s.web.servlet.DispatcherServlet -  Completed initialization in 1 ms
+2024-18-31  16:18:27 [http-nio-8081-exec-1] com.hotelManagementSystem.hotel.util.generics.service.impl.CommonServiceImpl INFO  c.h.h.s.impl.CustomerServiceImpl -  Found All Details : CustomerServiceImpl
+2024-20-31  16:20:27 [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-20-31  16:20:27 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown initiated...
+2024-20-31  16:20:27 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown completed.
+2024-20-31  16:20:52 [main] org.springframework.test.context.support.AnnotationConfigContextLoaderUtils INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils -  Could not detect default configuration classes for test class [com.hotelManagementSystem.hotel.HotelApplicationTests]: HotelApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-20-31  16:20:52 [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper INFO  o.s.b.t.c.SpringBootTestContextBootstrapper -  Found @SpringBootConfiguration com.hotelManagementSystem.hotel.HotelApplication for test class com.hotelManagementSystem.hotel.HotelApplicationTests
+2024-20-31  16:20:52 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplicationTests -  Starting HotelApplicationTests using Java 17.0.12 with PID 16452 (started by Gyan  chathuranaga in E:\SpringBootP\HotelMangementMicroService\hotel-management)
+2024-20-31  16:20:52 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplicationTests -  No active profile set, falling back to 1 default profile: "default"
+2024-20-31  16:20:53 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-20-31  16:20:53 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 70 ms. Found 3 JPA repository interfaces.
+2024-20-31  16:20:54 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-20-31  16:20:54 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-20-31  16:20:54 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
+2024-20-31  16:20:54 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-20-31  16:20:54 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
+2024-20-31  16:20:54 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e20f4e3
+2024-20-31  16:20:54 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
+2024-20-31  16:20:54 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-20-31  16:20:54 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-20-31  16:20:55 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-20-31  16:20:55 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-20-31  16:20:56 [main] org.springframework.data.jpa.repository.query.QueryEnhancerFactory INFO  o.s.d.j.r.query.QueryEnhancerFactory -  Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-20-31  16:20:56 [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-20-31  16:20:57 [main] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration -  
+
+Using generated security password: b11282c3-e205-4f83-b102-c2eeee0caa69
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-20-31  16:20:57 [main] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer -  Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-20-31  16:20:57 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplicationTests -  Started HotelApplicationTests in 5.02 seconds (process running for 6.128)
+2024-20-31  16:20:57 [scheduling-1] com.hotelManagementSystem.hotel.schedular.RoomAvailableUpdateBeforeEndDate INFO  c.h.h.s.RoomAvailableUpdateBeforeEndDate -  Start Scheduler For Checked Expired report !
+2024-20-31  16:20:57 [scheduling-1] com.hotelManagementSystem.hotel.schedular.RoomAvailableUpdateBeforeEndDate INFO  c.h.h.s.RoomAvailableUpdateBeforeEndDate -  Get The Expired Details Of Booking  !
+2024-20-31  16:20:57 [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-20-31  16:20:57 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown initiated...
+2024-20-31  16:20:57 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown completed.
+2024-21-31  16:21:30 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Starting HotelApplication using Java 17.0.12 with PID 12892 (E:\SpringBootP\HotelMangementMicroService\hotel-management\target\classes started by Gyan  chathuranaga in E:\SpringBootP\HotelMangementMicroService\hotel-management)
+2024-21-31  16:21:30 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplication -  No active profile set, falling back to 1 default profile: "default"
+2024-21-31  16:21:30 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-21-31  16:21:30 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
+2024-21-31  16:21:31 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat initialized with port 8081 (http)
+2024-21-31  16:21:31 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Initializing ProtocolHandler ["http-nio-8081"]
+2024-21-31  16:21:31 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Starting service [Tomcat]
+2024-21-31  16:21:31 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardEngine -  Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-21-31  16:21:31 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring embedded WebApplicationContext
+2024-21-31  16:21:31 [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -  Root WebApplicationContext: initialization completed in 1120 ms
+2024-21-31  16:21:31 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-21-31  16:21:31 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-21-31  16:21:31 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
+2024-21-31  16:21:31 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-21-31  16:21:31 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
+2024-21-31  16:21:32 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ac7856f
+2024-21-31  16:21:32 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
+2024-21-31  16:21:32 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-21-31  16:21:32 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-21-31  16:21:32 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-21-31  16:21:32 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-21-31  16:21:33 [main] org.springframework.data.jpa.repository.query.QueryEnhancerFactory INFO  o.s.d.j.r.query.QueryEnhancerFactory -  Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-21-31  16:21:33 [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-21-31  16:21:33 [main] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration -  
+
+Using generated security password: ea1316a1-caec-4517-808f-1bab374eb1fe
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-21-31  16:21:33 [main] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer -  Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-21-31  16:21:33 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Starting ProtocolHandler ["http-nio-8081"]
+2024-21-31  16:21:33 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat started on port 8081 (http) with context path '/'
+2024-21-31  16:21:33 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Started HotelApplication in 3.9 seconds (process running for 4.886)
+2024-21-31  16:21:33 [scheduling-1] com.hotelManagementSystem.hotel.schedular.RoomAvailableUpdateBeforeEndDate INFO  c.h.h.s.RoomAvailableUpdateBeforeEndDate -  Start Scheduler For Checked Expired report !
+2024-21-31  16:21:33 [scheduling-1] com.hotelManagementSystem.hotel.schedular.RoomAvailableUpdateBeforeEndDate INFO  c.h.h.s.RoomAvailableUpdateBeforeEndDate -  Get The Expired Details Of Booking  !

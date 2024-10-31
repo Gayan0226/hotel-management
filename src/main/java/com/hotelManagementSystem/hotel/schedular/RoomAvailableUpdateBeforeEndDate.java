@@ -17,9 +17,7 @@ public class RoomAvailableUpdateBeforeEndDate {
     private final Logger log = LoggerFactory.getLogger(RoomAvailableUpdateBeforeEndDate.class);
     private final RoomService roomService;
     private final BookingService bookingService;
-
-
-    @Scheduled(fixedRate = 1000 * 60)
+    @Scheduled(fixedRate = 1000 * 60*60*24)
     public void autoUpdateAvailability() {
         log.info("Start Scheduler For Checked Expired report !");
         List<Booking> bookingExpired = bookingService.checkBookingExpired();
@@ -32,6 +30,5 @@ public class RoomAvailableUpdateBeforeEndDate {
                 log.info("Cancel Booking : {}", ex.getCustomer().getCustomerName());
             });
         }
-
     }
 }
