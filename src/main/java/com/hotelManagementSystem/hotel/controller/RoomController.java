@@ -47,6 +47,6 @@ public interface RoomController extends CommonController<Room, Integer> {
     @GetMapping("/roomCategory")
     ResponseEntity<List<RoomCategory>> getRoomCategory() throws Exception;
 
-    @GetMapping("/availableRoom/{status}")
+    @GetMapping("/availableRoomBy/{status}")
     ResponseEntity<List<AvailableRoomDetails>> getRoomAvailable(@PathVariable("status")boolean status) throws Exception;
 }

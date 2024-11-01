@@ -18,6 +18,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.time.LocalDate;
 import java.util.Collections;
@@ -111,13 +112,19 @@ public class BookingServiceImpl extends CommonServiceImpl<Booking, Integer, Book
                         booking.getInDate(),
                         booking.getOutDate()
                 )).toList();
+if(!detailsToReport.isEmpty()){
+    InputStream resource = this.getClass().getResourceAsStream("/report/report.jrxml");
+    JasperReport report = JasperCompileManager.compileReport(resource);
+    JRBeanCollectionDataSource detailsReportBean = new JRBeanCollectionDataSource(detailsToReport);
+    Map<String, Object> parameters = new HashMap<>();
+    JasperPrint printReport = JasperFillManager.fillReport(report, parameters, detailsReportBean);
+    return JasperExportManager.exportReportToPdf(printReport);
+}
+else {
+    log.info("There Data Base Return data Is Empty Check Booking DataBase Have Data Or Not");
+    return new ByteArrayOutputStream().toByteArray();
+}
 
-        InputStream resource = this.getClass().getResourceAsStream("/report/report.jrxml");
-        JasperReport report = JasperCompileManager.compileReport(resource);
-        JRBeanCollectionDataSource detailsReportBean = new JRBeanCollectionDataSource(detailsToReport);
-        Map<String, Object> parameters = new HashMap<>();
-        JasperPrint printReport = JasperFillManager.fillReport(report, parameters, detailsReportBean);
-        return JasperExportManager.exportReportToPdf(printReport);
     }
 
     @Override
