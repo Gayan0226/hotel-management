@@ -68,7 +68,7 @@ public class BookingServiceImpl extends CommonServiceImpl<Booking, Integer, Book
             repository.save(bookingSave);
             log.info("Saved Successful : {}", bookingSave);
             roomService.updateAvailability(roomDetails.getRoomId(), false);
-            log.info("Update Availability Successful Room : {}", bookingSave.getRoom().getRoomId());
+//            log.info("Update Availability Successful Room : {}", bookingSave.getRoom().getRoomId());
             return bookingSave;
         } else {
             throw new NotFoundException(" Details Mismatch");
@@ -137,5 +137,10 @@ else {
        else {
             return Collections.emptyList();
         }
+    }
+
+    @Override
+    public void changeBookingActiveStatus(int bookingId, boolean b) {
+        repository.changeActiveStatusByBookingId(b,bookingId);
     }
 }

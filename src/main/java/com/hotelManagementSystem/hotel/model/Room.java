@@ -2,8 +2,6 @@ package com.hotelManagementSystem.hotel.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.hotelManagementSystem.hotel.model.enums.RoomCategory;
 import com.hotelManagementSystem.hotel.model.enums.RoomType;
 import jakarta.persistence.*;
@@ -31,6 +29,8 @@ public class Room {
     private RoomCategory roomCategory;
     @Column(name = "roomAvailable", columnDefinition = "TINYINT(1) default 1")
     private boolean roomAvailable;
+    @Column(name = "isBeforeService")
+    private boolean beforeService;
     @JsonBackReference(value = "roomBooking")
     @JsonIgnore
     @OneToOne(mappedBy = "room", cascade = CascadeType.ALL)

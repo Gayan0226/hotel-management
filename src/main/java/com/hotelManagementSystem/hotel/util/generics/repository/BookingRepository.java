@@ -18,5 +18,6 @@ public interface BookingRepository extends CommonRepository<Booking, Integer> {
 
     @Query(value = "SELECT * FROM booking WHERE out_date <= ?1", nativeQuery = true)
     List<Booking> checkExpiredDate(LocalDate checkDate);
-
+@Query(value = "update booking b SET b.active=?1 WHERE b.booking_id=?2",nativeQuery = true)
+    void changeActiveStatusByBookingId(boolean b, int bookingId);
 }

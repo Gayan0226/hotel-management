@@ -1,6 +1,5 @@
 package com.hotelManagementSystem.hotel.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -26,9 +25,9 @@ public class Booking {
     private LocalDate inDate;
     @JsonManagedReference(value = "roomBooking")
     @OneToOne
-    @JoinColumn(name = "roomId",referencedColumnName = "roomId")
+    @JoinColumn(name = "roomId", referencedColumnName = "roomId")
     private Room room;
-    @JsonManagedReference(value="customer")
+    @JsonManagedReference(value = "customer")
     @ManyToOne
     @JoinColumn(name = "customerId")
     private Customer customer;
@@ -36,18 +35,23 @@ public class Booking {
     private LocalDateTime createTime;
     @Column(name = "updateTime")
     private LocalDateTime updateTime;
+    @Column(name = "active" ,columnDefinition = "TINYINT(1) DEFAULT 1")
+    private boolean active;
+
     @PrePersist
     protected void onCreateTime() {
         if (createTime == null) {
             createTime = LocalDateTime.now();
         }
     }
+
     @PreUpdate
     protected void onUpdateTime() {
         if (updateTime == null || updateTime.isBefore(LocalDateTime.now())) {
             updateTime = LocalDateTime.now();
         }
     }
+
     public Booking(LocalDate outDate, LocalDate inDate, Room room, Customer customer) {
         this.outDate = outDate;
         this.inDate = inDate;

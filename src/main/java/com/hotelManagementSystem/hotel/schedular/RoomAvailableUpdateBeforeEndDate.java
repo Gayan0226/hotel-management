@@ -26,7 +26,7 @@ public class RoomAvailableUpdateBeforeEndDate {
             bookingExpired.forEach(ex -> {
                 roomService.updateAvailability(ex.getRoom().getRoomId(), true);
                 log.info("Now Available For Booking New Room :{}", ex.getRoom().getRoomId());
-                bookingService.cancelBooking(ex.getBookingId());
+                bookingService.changeBookingActiveStatus(ex.getBookingId(),false);
                 log.info("Cancel Booking : {}", ex.getCustomer().getCustomerName());
             });
         }

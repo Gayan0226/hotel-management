@@ -29,4 +29,6 @@ public interface BookingService extends CommonService<Booking, Integer> {
     byte[] generatePdf() throws JRException;
 
     List<Booking> checkBookingExpired();
+
+    void changeBookingActiveStatus(int bookingId, boolean b);
 }
