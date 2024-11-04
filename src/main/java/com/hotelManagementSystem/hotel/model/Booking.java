@@ -35,7 +35,7 @@ public class Booking {
     private LocalDateTime createTime;
     @Column(name = "updateTime")
     private LocalDateTime updateTime;
-    @Column(name = "active" ,columnDefinition = "TINYINT(1) DEFAULT 1")
+    @Column(name = "active", columnDefinition = "TINYINT(1) DEFAULT 1")
     private boolean active;
 
     @PrePersist

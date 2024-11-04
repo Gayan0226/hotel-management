@@ -75,7 +75,7 @@ public class RoomServiceImpl extends CommonServiceImpl<Room, Integer, RoomReposi
     @Override
     public List<AvailableRoomDetails> getAvailableRoomDetails(boolean status) {
         log.info("Status:{}", status);
-        return repository.findAllByRoomAvailable(status).stream().map(r -> new AvailableRoomDetails(
+        return repository.findAllByRoomAvailableAAndBeforeService(status,true).stream().map(r -> new AvailableRoomDetails(
                 r.getRoomId(),
                 r.getRoomPrice(),
                 r.getRoomType(),

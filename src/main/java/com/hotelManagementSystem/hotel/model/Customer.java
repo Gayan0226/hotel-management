@@ -2,12 +2,10 @@ package com.hotelManagementSystem.hotel.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import java.util.Set;
 
@@ -33,7 +31,7 @@ public class Customer {
     private String contactNumber;
     @Column(name = "customerIdNumber")
     private Long idNumber;
-    @JsonBackReference(value="customer")
+    @JsonBackReference(value = "customer")
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     private Set<Booking> booking;
 

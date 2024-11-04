@@ -29,7 +29,7 @@ public class Room {
     private RoomCategory roomCategory;
     @Column(name = "roomAvailable", columnDefinition = "TINYINT(1) default 1")
     private boolean roomAvailable;
-    @Column(name = "isBeforeService")
+    @Column(name = "isBeforeService",columnDefinition = "TINYINT(1) default 1")
     private boolean beforeService;
     @JsonBackReference(value = "roomBooking")
     @JsonIgnore
