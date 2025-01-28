@@ -1,0 +1,30 @@
+<configuration>
+    <property name="patternLog" value="%d{yyyy-mm-dd  HH:mm:ss} [%thread] %-5C %-5level %logger{36} -  %msg%n"/>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                ${patternLog}
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ROLLING_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>
+            ./logs/hotel.log
+        </file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>/logs/archive/application-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+            <maxFileSize>10MB</maxFileSize>
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>
+                ${patternLog}
+            </pattern>
+        </encoder>
+    </appender>spe
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="ROLLING_FILE"/>
+    </root>
+</configuration>

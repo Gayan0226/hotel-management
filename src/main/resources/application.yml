@@ -8,8 +8,8 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: create
-    show-sql: true
+      ddl-auto: update
+    show-sql: false
     database-platform: org.hibernate.dialect.MySQL8Dialect
 server:
   port: 8081

@@ -1,5 +1,6 @@
 package com.hotelManagementSystem.hotel.advice;
 
+import com.hotelManagementSystem.hotel.exception.DuplicateEntryException;
 import com.hotelManagementSystem.hotel.exception.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -18,10 +19,16 @@ public class Advice {
         response.put("message", ex.getMessage());
         return response;
     }
-    @ResponseStatus(HttpStatus.CONFLICT)
+    @ResponseStatus(HttpStatus.ALREADY_REPORTED)
     @ExceptionHandler(SQLIntegrityConstraintViolationException.class)
     public Map<String,Object> SQLIntegrityConstraintViolationExceptionHandler(SQLIntegrityConstraintViolationException ex){
         Map<String,Object> response =new HashMap<>();
+        response.put("message",ex.getMessage());
+        return response;
+    }
+    @ExceptionHandler(DuplicateEntryException.class)
+    public Map<String,Object> DuplicateEntryValueHandler(DuplicateEntryException ex){
+        Map<String,Object> response = new HashMap<>();
         response.put("message",ex.getMessage());
         return response;
     }
