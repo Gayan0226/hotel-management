@@ -112,18 +112,17 @@ public class BookingServiceImpl extends CommonServiceImpl<Booking, Integer, Book
                         booking.getInDate(),
                         booking.getOutDate()
                 )).toList();
-if(!detailsToReport.isEmpty()){
-    InputStream resource = this.getClass().getResourceAsStream("/report/report.jrxml");
-    JasperReport report = JasperCompileManager.compileReport(resource);
-    JRBeanCollectionDataSource detailsReportBean = new JRBeanCollectionDataSource(detailsToReport);
-    Map<String, Object> parameters = new HashMap<>();
-    JasperPrint printReport = JasperFillManager.fillReport(report, parameters, detailsReportBean);
-    return JasperExportManager.exportReportToPdf(printReport);
-}
-else {
-    log.info("There Data Base Return data Is Empty Check Booking DataBase Have Data Or Not");
-    return new ByteArrayOutputStream().toByteArray();
-}
+        if (!detailsToReport.isEmpty()) {
+            InputStream resource = this.getClass().getResourceAsStream("/report/report.jrxml");
+            JasperReport report = JasperCompileManager.compileReport(resource);
+            JRBeanCollectionDataSource detailsReportBean = new JRBeanCollectionDataSource(detailsToReport);
+            Map<String, Object> parameters = new HashMap<>();
+            JasperPrint printReport = JasperFillManager.fillReport(report, parameters, detailsReportBean);
+            return JasperExportManager.exportReportToPdf(printReport);
+        } else {
+            log.info("There Data Base Return data Is Empty Check Booking DataBase Have Data Or Not");
+            return new ByteArrayOutputStream().toByteArray();
+        }
 
     }
 
@@ -133,14 +132,13 @@ else {
         List<Booking> bookingExpired = repository.checkExpiredDate(checkDate);
         if (!bookingExpired.isEmpty()) {
             return bookingExpired;
-        }
-       else {
+        } else {
             return Collections.emptyList();
         }
     }
 
     @Override
     public void changeBookingActiveStatus(int bookingId, boolean b) {
-        repository.changeActiveStatusByBookingId(b,bookingId);
+        repository.changeActiveStatusByBookingId(b, bookingId);
     }
 }
