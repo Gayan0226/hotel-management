@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CustomerRepository extends CommonRepository<Customer,Integer> {
+    Customer findCustomerByUserName(String username);
 }
