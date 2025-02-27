@@ -1,4 +1,4 @@
-package com.hotelManagementSystem.hotel.util.generics.configurations;
+package com.hotelManagementSystem.hotel.configurations;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
