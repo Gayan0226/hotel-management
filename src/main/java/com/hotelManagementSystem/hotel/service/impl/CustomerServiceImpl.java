@@ -10,6 +10,7 @@ import com.hotelManagementSystem.hotel.util.generics.repository.CustomerReposito
 import com.hotelManagementSystem.hotel.util.generics.service.impl.CommonServiceImpl;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -18,9 +19,11 @@ public class CustomerServiceImpl extends CommonServiceImpl<Customer, Integer, Cu
 
     @Autowired
     ModelMapper modelMapper;
+    private final BCryptPasswordEncoder encoder;
 
-    public CustomerServiceImpl(CustomerRepository repository) {
+    public CustomerServiceImpl(CustomerRepository repository, BCryptPasswordEncoder encoder) {
         super(repository);
+        this.encoder = encoder;
     }
 
     @Override
@@ -48,6 +51,8 @@ public class CustomerServiceImpl extends CommonServiceImpl<Customer, Integer, Cu
 
     @Override
     public String saveCustomer(CustomerSaveDto customerDto) {
+        String encodedPassword = encoder.encode(customerDto.getPassword());
+        customerDto.setPassword(encodedPassword);
         Customer saveCustomer = modelMapper.map(customerDto, Customer.class);
         repository.save(saveCustomer);
         return "Save Customer Successfully";
