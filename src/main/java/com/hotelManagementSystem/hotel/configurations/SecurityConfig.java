@@ -4,6 +4,7 @@ import com.hotelManagementSystem.hotel.filter.JWTFilter;
 import com.hotelManagementSystem.hotel.service.impl.CommonUserDetailService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -35,6 +36,8 @@ public class SecurityConfig {
                                 .requestMatchers("/customer/**").hasRole("CUSTOMER")
                                 .requestMatchers("customer/saveCustomer").hasRole("ADMIN")
                                 .requestMatchers("/auth/**").permitAll()
+                                .requestMatchers(HttpMethod.POST, "/admin/create")
+                                .permitAll()
                                 .anyRequest().authenticated())
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
