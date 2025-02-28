@@ -54,6 +54,11 @@ public class SecurityConfig {
     }
 
     @Bean
+    public BCryptPasswordEncoder encodePassword() {
+        return new BCryptPasswordEncoder(12);
+    }
+
+    @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
         return configuration.getAuthenticationManager();
     }

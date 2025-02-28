@@ -13,10 +13,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class AdminServiceImpl extends CommonServiceImpl<Admin, Integer, AdminRepository> implements AdminService {
     private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
-    private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
+    private final BCryptPasswordEncoder encoder;
 
-    public AdminServiceImpl(AdminRepository repository) {
+    public AdminServiceImpl(AdminRepository repository, BCryptPasswordEncoder encoder) {
         super(repository);
+        this.encoder = encoder;
     }
 
     @Override
@@ -26,7 +27,7 @@ public class AdminServiceImpl extends CommonServiceImpl<Admin, Integer, AdminRep
                     new Admin(admin.getUserName(),
                             encoder.encode(admin.getPassword())
                     ));
-            LOGGER.info("{} Saved Successful !",saveAdmin.getUsername());
+            LOGGER.info("{} Saved Successful !", saveAdmin.getUsername());
             return saveAdmin.getUsername();
         } catch (Exception e) {
             LOGGER.debug("Admin Save Failed !");
