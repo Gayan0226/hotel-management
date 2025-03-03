@@ -4,6 +4,7 @@ import com.hotelManagementSystem.hotel.filter.JWTFilter;
 import com.hotelManagementSystem.hotel.service.impl.CommonUserDetailService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -28,13 +29,14 @@ public class SecurityConfig {
         this.jwtFilter = jwtFilter;
     }
 
+    //TODO Change The Role Permissions
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth ->
                         auth
-                                .requestMatchers("/customer/**").hasRole("CUSTOMER")
-                                .requestMatchers("customer/saveCustomer").hasRole("ADMIN")
+//                                .requestMatchers("/customer/**").hasRole("CUSTOMER")
+                                .requestMatchers("customer/saveCustomer").permitAll()
                                 .requestMatchers("/auth/**").permitAll()
                                 .requestMatchers(HttpMethod.POST, "/admin/create")
                                 .permitAll()
