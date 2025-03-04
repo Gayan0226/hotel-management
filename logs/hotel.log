@@ -1,68 +1,450 @@
-2024-17-03  18:17:20 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Starting HotelApplication using Java 17.0.12 with PID 9808 (E:\SpringBootP\HotelMangementMicroService\hotel-management\target\classes started by Gyan  chathuranaga in E:\SpringBootP\HotelMangementMicroService\hotel-management)
-2024-17-03  18:17:20 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplication -  No active profile set, falling back to 1 default profile: "default"
-2024-17-03  18:17:21 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-17-03  18:17:21 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 62 ms. Found 3 JPA repository interfaces.
-2024-17-03  18:17:21 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat initialized with port 8081 (http)
-2024-17-03  18:17:21 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Initializing ProtocolHandler ["http-nio-8081"]
-2024-17-03  18:17:21 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Starting service [Tomcat]
-2024-17-03  18:17:21 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardEngine -  Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-17-03  18:17:21 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring embedded WebApplicationContext
-2024-17-03  18:17:21 [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -  Root WebApplicationContext: initialization completed in 1481 ms
-2024-17-03  18:17:22 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-17-03  18:17:22 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-17-03  18:17:22 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
-2024-17-03  18:17:22 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-17-03  18:17:22 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
-2024-17-03  18:17:22 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d0b447b
-2024-17-03  18:17:22 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
-2024-17-03  18:17:22 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-17-03  18:17:22 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-17-03  18:17:23 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-17-03  18:17:23 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-17-03  18:17:24 [main] org.springframework.data.jpa.repository.query.QueryEnhancerFactory INFO  o.s.d.j.r.query.QueryEnhancerFactory -  Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-17-03  18:17:24 [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-17-03  18:17:24 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Starting ProtocolHandler ["http-nio-8081"]
-2024-17-03  18:17:24 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat started on port 8081 (http) with context path '/'
-2024-17-03  18:17:24 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Started HotelApplication in 5.589 seconds (process running for 6.645)
-2024-17-03  18:17:29 [http-nio-8081-exec-1] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-17-03  18:17:29 [http-nio-8081-exec-1] org.springframework.web.servlet.FrameworkServlet INFO  o.s.web.servlet.DispatcherServlet -  Initializing Servlet 'dispatcherServlet'
-2024-17-03  18:17:29 [http-nio-8081-exec-1] org.springframework.web.servlet.FrameworkServlet INFO  o.s.web.servlet.DispatcherServlet -  Completed initialization in 0 ms
-2024-17-03  18:17:29 [http-nio-8081-exec-1] com.hotelManagementSystem.hotel.service.impl.RoomServiceImpl INFO  c.h.h.service.impl.RoomServiceImpl -  Status:true
-2024-17-03  18:17:46 [http-nio-8081-exec-2] com.hotelManagementSystem.hotel.util.generics.service.impl.CommonServiceImpl INFO  c.h.h.s.impl.CustomerServiceImpl -  Found All Details : CustomerServiceImpl
-2024-18-03  18:18:52 [http-nio-8081-exec-8] com.hotelManagementSystem.hotel.util.generics.service.impl.CommonServiceImpl INFO  c.h.h.s.impl.CustomerServiceImpl -  Found All Details : CustomerServiceImpl
-2024-24-03  18:24:11 [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-24-03  18:24:11 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown initiated...
-2024-24-03  18:24:11 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown completed.
-2025-47-26  10:47:19 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Starting HotelApplication using Java 17.0.14 with PID 9328 (E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes started by Gyan  chathuranaga in E:\SpringBootP\HotelNewFor Add The JWT\hotel-management)
-2025-47-26  10:47:19 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplication -  No active profile set, falling back to 1 default profile: "default"
-2025-47-26  10:47:20 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-47-26  10:47:20 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
-2025-47-26  10:47:21 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat initialized with port 8081 (http)
-2025-47-26  10:47:21 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Initializing ProtocolHandler ["http-nio-8081"]
-2025-47-26  10:47:21 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Starting service [Tomcat]
-2025-47-26  10:47:21 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardEngine -  Starting Servlet engine: [Apache Tomcat/10.1.30]
-2025-47-26  10:47:21 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring embedded WebApplicationContext
-2025-47-26  10:47:21 [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -  Root WebApplicationContext: initialization completed in 1562 ms
-2025-47-26  10:47:21 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-47-26  10:47:21 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
-2025-47-26  10:47:21 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
-2025-47-26  10:47:21 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-47-26  10:47:21 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
-2025-47-26  10:47:22 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5cb8580
-2025-47-26  10:47:22 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
-2025-47-26  10:47:22 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-47-26  10:47:22 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-47-26  10:47:23 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-47-26  10:47:23 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-47-26  10:47:23 [main] org.springframework.data.jpa.repository.query.QueryEnhancerFactory INFO  o.s.d.j.r.query.QueryEnhancerFactory -  Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-47-26  10:47:23 [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-47-26  10:47:24 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Starting ProtocolHandler ["http-nio-8081"]
-2025-47-26  10:47:24 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat started on port 8081 (http) with context path '/'
-2025-47-26  10:47:24 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Started HotelApplication in 4.789 seconds (process running for 6.591)
-2025-48-26  10:48:02 [http-nio-8081-exec-1] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-48-26  10:48:02 [http-nio-8081-exec-1] org.springframework.web.servlet.FrameworkServlet INFO  o.s.web.servlet.DispatcherServlet -  Initializing Servlet 'dispatcherServlet'
-2025-48-26  10:48:02 [http-nio-8081-exec-1] org.springframework.web.servlet.FrameworkServlet INFO  o.s.web.servlet.DispatcherServlet -  Completed initialization in 2 ms
-2025-48-26  10:48:03 [http-nio-8081-exec-9] org.springdoc.api.AbstractOpenApiResource INFO  o.s.api.AbstractOpenApiResource -  Init duration for springdoc-openapi is: 430 ms
-2025-45-26  11:45:54 [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-45-26  11:45:54 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown initiated...
-2025-45-26  11:45:54 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown completed.
+2025-04-04  12:04:26 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Starting HotelApplication using Java 17.0.14 with PID 18840 (E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes started by Gyan  chathuranaga in E:\SpringBootP\HotelNewFor Add The JWT\hotel-management)
+2025-04-04  12:04:26 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplication -  No active profile set, falling back to 1 default profile: "default"
+2025-04-04  12:04:27 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-04  12:04:27 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 62 ms. Found 4 JPA repository interfaces.
+2025-04-04  12:04:27 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat initialized with port 8081 (http)
+2025-04-04  12:04:27 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Initializing ProtocolHandler ["http-nio-8081"]
+2025-04-04  12:04:27 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Starting service [Tomcat]
+2025-04-04  12:04:27 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardEngine -  Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-04-04  12:04:27 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring embedded WebApplicationContext
+2025-04-04  12:04:27 [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -  Root WebApplicationContext: initialization completed in 1688 ms
+2025-04-04  12:04:27 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-04  12:04:28 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-04-04  12:04:28 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
+2025-04-04  12:04:28 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-04  12:04:28 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
+2025-04-04  12:04:28 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72585e83
+2025-04-04  12:04:28 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
+2025-04-04  12:04:28 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-04  12:04:28 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-04  12:04:29 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-04  12:04:29 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04  12:04:29 [main] org.springframework.context.support.AbstractApplicationContext WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\configurations\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'commonUserDetailService' defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\service\impl\CommonUserDetailService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2025-04-04  12:04:29 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04  12:04:29 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown initiated...
+2025-04-04  12:04:29 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown completed.
+2025-04-04  12:04:29 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Stopping service [Tomcat]
+2025-04-04  12:04:29 [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger INFO  o.s.b.a.l.ConditionEvaluationReportLogger -  
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-04  12:04:29 [main] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter ERROR o.s.b.d.LoggingFailureAnalysisReporter -  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  securityConfig defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\configurations\SecurityConfig.class]
+↑     ↓
+|  commonUserDetailService defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\service\impl\CommonUserDetailService.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2025-09-04  12:09:33 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Starting HotelApplication using Java 17.0.14 with PID 16972 (E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes started by Gyan  chathuranaga in E:\SpringBootP\HotelNewFor Add The JWT\hotel-management)
+2025-09-04  12:09:33 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplication -  No active profile set, falling back to 1 default profile: "default"
+2025-09-04  12:09:33 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-04  12:09:33 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
+2025-09-04  12:09:34 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat initialized with port 8081 (http)
+2025-09-04  12:09:34 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Initializing ProtocolHandler ["http-nio-8081"]
+2025-09-04  12:09:34 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Starting service [Tomcat]
+2025-09-04  12:09:34 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardEngine -  Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-09-04  12:09:34 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring embedded WebApplicationContext
+2025-09-04  12:09:34 [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -  Root WebApplicationContext: initialization completed in 1141 ms
+2025-09-04  12:09:34 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-04  12:09:34 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-09-04  12:09:34 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
+2025-09-04  12:09:34 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-04  12:09:34 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
+2025-09-04  12:09:35 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@183ef89a
+2025-09-04  12:09:35 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
+2025-09-04  12:09:35 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-04  12:09:35 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-04  12:09:35 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-04  12:09:35 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-04  12:09:36 [main] org.springframework.context.support.AbstractApplicationContext WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\configurations\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'commonUserDetailService' defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\service\impl\CommonUserDetailService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2025-09-04  12:09:36 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-04  12:09:36 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown initiated...
+2025-09-04  12:09:36 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown completed.
+2025-09-04  12:09:36 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Stopping service [Tomcat]
+2025-09-04  12:09:36 [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger INFO  o.s.b.a.l.ConditionEvaluationReportLogger -  
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-04  12:09:36 [main] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter ERROR o.s.b.d.LoggingFailureAnalysisReporter -  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  securityConfig defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\configurations\SecurityConfig.class]
+↑     ↓
+|  commonUserDetailService defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\service\impl\CommonUserDetailService.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2025-11-04  12:11:01 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Starting HotelApplication using Java 17.0.14 with PID 12884 (E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes started by Gyan  chathuranaga in E:\SpringBootP\HotelNewFor Add The JWT\hotel-management)
+2025-11-04  12:11:01 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplication -  No active profile set, falling back to 1 default profile: "default"
+2025-11-04  12:11:02 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-04  12:11:02 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 62 ms. Found 4 JPA repository interfaces.
+2025-11-04  12:11:03 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat initialized with port 8081 (http)
+2025-11-04  12:11:03 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Initializing ProtocolHandler ["http-nio-8081"]
+2025-11-04  12:11:03 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Starting service [Tomcat]
+2025-11-04  12:11:03 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardEngine -  Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-04  12:11:03 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring embedded WebApplicationContext
+2025-11-04  12:11:03 [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -  Root WebApplicationContext: initialization completed in 1209 ms
+2025-11-04  12:11:03 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-04  12:11:03 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-04  12:11:03 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
+2025-11-04  12:11:03 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-04  12:11:03 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
+2025-11-04  12:11:03 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4d75c604
+2025-11-04  12:11:03 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
+2025-11-04  12:11:03 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-04  12:11:03 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-11-04  12:11:04 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-04  12:11:04 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-04  12:11:04 [main] org.springframework.context.support.AbstractApplicationContext WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\configurations\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'commonUserDetailService' defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\service\impl\CommonUserDetailService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2025-11-04  12:11:04 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-04  12:11:04 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown initiated...
+2025-11-04  12:11:04 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown completed.
+2025-11-04  12:11:04 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Stopping service [Tomcat]
+2025-11-04  12:11:04 [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger INFO  o.s.b.a.l.ConditionEvaluationReportLogger -  
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-04  12:11:05 [main] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter ERROR o.s.b.d.LoggingFailureAnalysisReporter -  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  securityConfig defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\configurations\SecurityConfig.class]
+↑     ↓
+|  commonUserDetailService defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\service\impl\CommonUserDetailService.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2025-13-04  12:13:24 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Starting HotelApplication using Java 17.0.14 with PID 6692 (E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes started by Gyan  chathuranaga in E:\SpringBootP\HotelNewFor Add The JWT\hotel-management)
+2025-13-04  12:13:24 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplication -  No active profile set, falling back to 1 default profile: "default"
+2025-13-04  12:13:24 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-13-04  12:13:24 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 62 ms. Found 4 JPA repository interfaces.
+2025-13-04  12:13:25 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat initialized with port 8081 (http)
+2025-13-04  12:13:25 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Initializing ProtocolHandler ["http-nio-8081"]
+2025-13-04  12:13:25 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Starting service [Tomcat]
+2025-13-04  12:13:25 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardEngine -  Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-13-04  12:13:25 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring embedded WebApplicationContext
+2025-13-04  12:13:25 [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -  Root WebApplicationContext: initialization completed in 1150 ms
+2025-13-04  12:13:25 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-13-04  12:13:25 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-13-04  12:13:25 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
+2025-13-04  12:13:25 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-13-04  12:13:25 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
+2025-13-04  12:13:25 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@388e4c25
+2025-13-04  12:13:25 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
+2025-13-04  12:13:25 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-13-04  12:13:25 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-13-04  12:13:26 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-13-04  12:13:26 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-13-04  12:13:26 [main] org.springframework.context.support.AbstractApplicationContext WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\configurations\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'commonUserDetailService' defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\service\impl\CommonUserDetailService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2025-13-04  12:13:26 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-13-04  12:13:26 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown initiated...
+2025-13-04  12:13:26 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown completed.
+2025-13-04  12:13:26 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Stopping service [Tomcat]
+2025-13-04  12:13:26 [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger INFO  o.s.b.a.l.ConditionEvaluationReportLogger -  
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-13-04  12:13:27 [main] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter ERROR o.s.b.d.LoggingFailureAnalysisReporter -  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  securityConfig defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\configurations\SecurityConfig.class]
+↑     ↓
+|  commonUserDetailService defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\service\impl\CommonUserDetailService.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2025-14-04  12:14:43 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Starting HotelApplication using Java 17.0.14 with PID 6696 (E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes started by Gyan  chathuranaga in E:\SpringBootP\HotelNewFor Add The JWT\hotel-management)
+2025-14-04  12:14:43 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplication -  No active profile set, falling back to 1 default profile: "default"
+2025-14-04  12:14:43 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-14-04  12:14:44 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
+2025-14-04  12:14:44 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat initialized with port 8081 (http)
+2025-14-04  12:14:44 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Initializing ProtocolHandler ["http-nio-8081"]
+2025-14-04  12:14:44 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Starting service [Tomcat]
+2025-14-04  12:14:44 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardEngine -  Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-14-04  12:14:44 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring embedded WebApplicationContext
+2025-14-04  12:14:44 [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -  Root WebApplicationContext: initialization completed in 1095 ms
+2025-14-04  12:14:44 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-14-04  12:14:44 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-14-04  12:14:44 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
+2025-14-04  12:14:44 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-14-04  12:14:44 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
+2025-14-04  12:14:45 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@673a9db4
+2025-14-04  12:14:45 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
+2025-14-04  12:14:45 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-14-04  12:14:45 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-14-04  12:14:45 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-14-04  12:14:45 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-14-04  12:14:46 [main] org.springframework.context.support.AbstractApplicationContext WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\configurations\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'commonUserDetailService' defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\service\impl\CommonUserDetailService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2025-14-04  12:14:46 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-14-04  12:14:46 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown initiated...
+2025-14-04  12:14:46 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown completed.
+2025-14-04  12:14:46 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Stopping service [Tomcat]
+2025-14-04  12:14:46 [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger INFO  o.s.b.a.l.ConditionEvaluationReportLogger -  
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-14-04  12:14:46 [main] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter ERROR o.s.b.d.LoggingFailureAnalysisReporter -  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  securityConfig defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\configurations\SecurityConfig.class]
+↑     ↓
+|  commonUserDetailService defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\service\impl\CommonUserDetailService.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2025-21-04  12:21:32 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Starting HotelApplication using Java 17.0.14 with PID 5828 (E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes started by Gyan  chathuranaga in E:\SpringBootP\HotelNewFor Add The JWT\hotel-management)
+2025-21-04  12:21:32 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplication -  No active profile set, falling back to 1 default profile: "default"
+2025-21-04  12:21:32 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-21-04  12:21:32 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 59 ms. Found 4 JPA repository interfaces.
+2025-21-04  12:21:33 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat initialized with port 8081 (http)
+2025-21-04  12:21:33 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Initializing ProtocolHandler ["http-nio-8081"]
+2025-21-04  12:21:33 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Starting service [Tomcat]
+2025-21-04  12:21:33 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardEngine -  Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-21-04  12:21:33 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring embedded WebApplicationContext
+2025-21-04  12:21:33 [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -  Root WebApplicationContext: initialization completed in 1169 ms
+2025-21-04  12:21:33 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-21-04  12:21:33 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-21-04  12:21:33 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
+2025-21-04  12:21:33 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-21-04  12:21:33 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
+2025-21-04  12:21:34 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5649f55
+2025-21-04  12:21:34 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
+2025-21-04  12:21:34 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-21-04  12:21:34 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-21-04  12:21:34 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-21-04  12:21:34 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-21-04  12:21:35 [main] org.springframework.context.support.AbstractApplicationContext WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\configurations\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'commonUserDetailService' defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\service\impl\CommonUserDetailService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2025-21-04  12:21:35 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-21-04  12:21:35 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown initiated...
+2025-21-04  12:21:35 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown completed.
+2025-21-04  12:21:35 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Stopping service [Tomcat]
+2025-21-04  12:21:35 [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger INFO  o.s.b.a.l.ConditionEvaluationReportLogger -  
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-21-04  12:21:35 [main] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter ERROR o.s.b.d.LoggingFailureAnalysisReporter -  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  securityConfig defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\configurations\SecurityConfig.class]
+↑     ↓
+|  commonUserDetailService defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\service\impl\CommonUserDetailService.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2025-23-04  12:23:20 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Starting HotelApplication using Java 17.0.14 with PID 20248 (E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes started by Gyan  chathuranaga in E:\SpringBootP\HotelNewFor Add The JWT\hotel-management)
+2025-23-04  12:23:20 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplication -  No active profile set, falling back to 1 default profile: "default"
+2025-23-04  12:23:21 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-23-04  12:23:21 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 59 ms. Found 4 JPA repository interfaces.
+2025-23-04  12:23:21 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat initialized with port 8081 (http)
+2025-23-04  12:23:21 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Initializing ProtocolHandler ["http-nio-8081"]
+2025-23-04  12:23:21 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Starting service [Tomcat]
+2025-23-04  12:23:21 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardEngine -  Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-23-04  12:23:21 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring embedded WebApplicationContext
+2025-23-04  12:23:21 [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -  Root WebApplicationContext: initialization completed in 1121 ms
+2025-23-04  12:23:21 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-23-04  12:23:21 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-23-04  12:23:21 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
+2025-23-04  12:23:21 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-23-04  12:23:21 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
+2025-23-04  12:23:22 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@401b67a9
+2025-23-04  12:23:22 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
+2025-23-04  12:23:22 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-23-04  12:23:22 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-23-04  12:23:22 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-23-04  12:23:23 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-23-04  12:23:23 [main] org.springframework.context.support.AbstractApplicationContext WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\configurations\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'commonUserDetailService' defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\service\impl\CommonUserDetailService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2025-23-04  12:23:23 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-23-04  12:23:23 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown initiated...
+2025-23-04  12:23:23 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown completed.
+2025-23-04  12:23:23 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Stopping service [Tomcat]
+2025-23-04  12:23:23 [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger INFO  o.s.b.a.l.ConditionEvaluationReportLogger -  
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-23-04  12:23:23 [main] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter ERROR o.s.b.d.LoggingFailureAnalysisReporter -  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  securityConfig defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\configurations\SecurityConfig.class]
+↑     ↓
+|  commonUserDetailService defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\service\impl\CommonUserDetailService.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2025-26-04  12:26:13 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Starting HotelApplication using Java 17.0.14 with PID 17760 (E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes started by Gyan  chathuranaga in E:\SpringBootP\HotelNewFor Add The JWT\hotel-management)
+2025-26-04  12:26:13 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplication -  No active profile set, falling back to 1 default profile: "default"
+2025-26-04  12:26:14 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-26-04  12:26:14 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 65 ms. Found 4 JPA repository interfaces.
+2025-26-04  12:26:14 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat initialized with port 8081 (http)
+2025-26-04  12:26:14 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Initializing ProtocolHandler ["http-nio-8081"]
+2025-26-04  12:26:14 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Starting service [Tomcat]
+2025-26-04  12:26:14 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardEngine -  Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-26-04  12:26:14 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring embedded WebApplicationContext
+2025-26-04  12:26:14 [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -  Root WebApplicationContext: initialization completed in 1220 ms
+2025-26-04  12:26:14 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-26-04  12:26:15 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-26-04  12:26:15 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
+2025-26-04  12:26:15 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-26-04  12:26:15 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
+2025-26-04  12:26:15 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@59c862af
+2025-26-04  12:26:15 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
+2025-26-04  12:26:15 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-26-04  12:26:15 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-26-04  12:26:16 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-26-04  12:26:16 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-26-04  12:26:16 [main] org.springframework.context.support.AbstractApplicationContext WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\configurations\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'commonUserDetailService' defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\service\impl\CommonUserDetailService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2025-26-04  12:26:16 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-26-04  12:26:16 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown initiated...
+2025-26-04  12:26:16 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown completed.
+2025-26-04  12:26:16 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Stopping service [Tomcat]
+2025-26-04  12:26:16 [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger INFO  o.s.b.a.l.ConditionEvaluationReportLogger -  
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-26-04  12:26:16 [main] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter ERROR o.s.b.d.LoggingFailureAnalysisReporter -  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  securityConfig defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\configurations\SecurityConfig.class]
+↑     ↓
+|  commonUserDetailService defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\service\impl\CommonUserDetailService.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2025-29-04  12:29:10 [main] org.springframework.boot.StartupInfoLogger INFO  c.h.hotel.HotelApplication -  Starting HotelApplication using Java 17.0.14 with PID 13824 (E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes started by Gyan  chathuranaga in E:\SpringBootP\HotelNewFor Add The JWT\hotel-management)
+2025-29-04  12:29:10 [main] org.springframework.boot.SpringApplication INFO  c.h.hotel.HotelApplication -  No active profile set, falling back to 1 default profile: "default"
+2025-29-04  12:29:11 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-29-04  12:29:11 [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate INFO  o.s.d.r.c.RepositoryConfigurationDelegate -  Finished Spring Data repository scanning in 60 ms. Found 4 JPA repository interfaces.
+2025-29-04  12:29:11 [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer INFO  o.s.b.w.e.tomcat.TomcatWebServer -  Tomcat initialized with port 8081 (http)
+2025-29-04  12:29:11 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.coyote.http11.Http11NioProtocol -  Initializing ProtocolHandler ["http-nio-8081"]
+2025-29-04  12:29:11 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Starting service [Tomcat]
+2025-29-04  12:29:11 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardEngine -  Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-29-04  12:29:12 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -  Initializing Spring embedded WebApplicationContext
+2025-29-04  12:29:12 [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -  Root WebApplicationContext: initialization completed in 1388 ms
+2025-29-04  12:29:12 [main] org.hibernate.jpa.internal.util.LogHelper INFO  o.h.jpa.internal.util.LogHelper -  HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-29-04  12:29:12 [main] org.hibernate.Version INFO  org.hibernate.Version -  HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-29-04  12:29:12 [main] org.hibernate.cache.internal.RegionFactoryInitiator INFO  o.h.c.i.RegionFactoryInitiator -  HHH000026: Second-level cache disabled
+2025-29-04  12:29:12 [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo INFO  o.s.o.j.p.SpringPersistenceUnitInfo -  No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-29-04  12:29:12 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Starting...
+2025-29-04  12:29:12 [main] com.zaxxer.hikari.pool.HikariPool INFO  com.zaxxer.hikari.pool.HikariPool -  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e3ee457
+2025-29-04  12:29:12 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Start completed.
+2025-29-04  12:29:12 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-29-04  12:29:12 [main] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl WARN  org.hibernate.orm.deprecation -  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-29-04  12:29:13 [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-29-04  12:29:13 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-29-04  12:29:13 [main] org.springframework.context.support.AbstractApplicationContext WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\configurations\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'commonUserDetailService' defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\service\impl\CommonUserDetailService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2025-29-04  12:29:13 [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -  Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-29-04  12:29:13 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown initiated...
+2025-29-04  12:29:13 [main] com.zaxxer.hikari.HikariDataSource INFO  com.zaxxer.hikari.HikariDataSource -  HikariPool-1 - Shutdown completed.
+2025-29-04  12:29:13 [main] org.apache.juli.logging.DirectJDKLog INFO  o.a.catalina.core.StandardService -  Stopping service [Tomcat]
+2025-29-04  12:29:13 [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger INFO  o.s.b.a.l.ConditionEvaluationReportLogger -  
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-29-04  12:29:13 [main] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter ERROR o.s.b.d.LoggingFailureAnalysisReporter -  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  securityConfig defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\configurations\SecurityConfig.class]
+↑     ↓
+|  commonUserDetailService defined in file [E:\SpringBootP\HotelNewFor Add The JWT\hotel-management\target\classes\com\hotelManagementSystem\hotel\service\impl\CommonUserDetailService.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
