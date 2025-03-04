@@ -2,10 +2,9 @@ package com.hotelManagementSystem.hotel.controller;
 
 import com.hotelManagementSystem.hotel.model.Admin;
 import com.hotelManagementSystem.hotel.util.generics.controller.CommonController;
+import com.hotelManagementSystem.hotel.util.generics.dto.AdminRequestDto;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,6 +18,8 @@ public interface AdminController extends CommonController<Admin, Integer> {
     @PutMapping("/update")
     ResponseEntity<Admin> update(Admin t, Integer id) throws Exception;
 
-    @PostMapping("/create")
+    @DeleteMapping("/delete")
     ResponseEntity<Admin> delete(Integer id) throws Exception;
+    @PostMapping("/create")
+    ResponseEntity<String>createAdmin(@RequestBody AdminRequestDto admin) throws Exception;
 }

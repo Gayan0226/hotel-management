@@ -5,4 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AdminRepository extends CommonRepository<Admin, Integer> {
+    Admin findAdminsByUsername(String username);
 }

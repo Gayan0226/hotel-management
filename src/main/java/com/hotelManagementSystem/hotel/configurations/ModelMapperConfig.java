@@ -1,4 +1,4 @@
-package com.hotelManagementSystem.hotel.util.generics.configurations;
+package com.hotelManagementSystem.hotel.configurations;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

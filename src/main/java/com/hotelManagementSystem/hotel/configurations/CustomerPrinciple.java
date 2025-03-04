@@ -1,4 +1,4 @@
-package com.hotelManagementSystem.hotel.util.generics.configurations;
+package com.hotelManagementSystem.hotel.configurations;
 
 import com.hotelManagementSystem.hotel.model.Customer;
 import org.springframework.security.core.GrantedAuthority;
