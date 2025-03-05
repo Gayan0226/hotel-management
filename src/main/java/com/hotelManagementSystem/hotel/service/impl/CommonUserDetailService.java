@@ -9,6 +9,7 @@ import com.hotelManagementSystem.hotel.util.generics.repository.AdminRepository;
 import com.hotelManagementSystem.hotel.util.generics.repository.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -25,9 +26,9 @@ public class CommonUserDetailService implements UserDetailsService {
     private final JWTService jwtService;
     private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
-    public CommonUserDetailService(AdminRepository adminRepository, AuthenticationManager authenticationManager, CustomerRepository customerRepository, JWTService jwtService) {
+    public CommonUserDetailService(AdminRepository adminRepository,  @Lazy AuthenticationManager authenticationManager, CustomerRepository customerRepository, JWTService jwtService) {
         this.adminRepository = adminRepository;
-        this.authenticationManager = authenticationManager;
+       this.authenticationManager = authenticationManager;
         this.customerRepository = customerRepository;
         this.jwtService = jwtService;
     }
