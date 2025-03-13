@@ -4,7 +4,6 @@ import com.hotelManagementSystem.hotel.filter.JWTFilter;
 import com.hotelManagementSystem.hotel.service.impl.CommonUserDetailService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -35,12 +34,17 @@ public class SecurityConfig {
         return http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth ->
                         auth
-//                                .requestMatchers("/customer/**").hasRole("CUSTOMER")
+                                .requestMatchers(
+                                        "/v3/api-docs/**",
+                                        "/swagger-ui/**")
+                                .permitAll()
                                 .requestMatchers("customer/saveCustomer").permitAll()
-                                .requestMatchers("/auth/**").permitAll()
+                                .requestMatchers(HttpMethod.POST,"/auth/token").permitAll()
                                 .requestMatchers(HttpMethod.POST, "/admin/create")
                                 .permitAll()
                                 .anyRequest().authenticated())
+
+
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
