@@ -11,12 +11,34 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/admin")
 @CrossOrigin
 public class AdminControllerImpl extends CommonControllerImpl<Admin, Integer, AdminService> implements AdminController {
     public AdminControllerImpl(AdminService service) {
         super(service);
+    }
+
+    @Override
+    public ResponseEntity<List<Admin>> getAll() throws Exception {
+        return super.getAll();
+    }
+
+    @Override
+    public ResponseEntity<Admin> findById(Integer integer) throws Exception {
+        return super.findById(integer);
+    }
+
+    @Override
+    public ResponseEntity<Admin> update(Admin admin, Integer integer) throws Exception {
+        return super.update(admin, integer);
+    }
+
+    @Override
+    public ResponseEntity<Admin> delete(Integer integer) throws Exception {
+        return super.delete(integer);
     }
 
     @Override
