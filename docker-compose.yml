@@ -23,13 +23,13 @@ services:
 
 
   hotel-management-app:
-    image: gayan0226/hotel:v2
+#    image: gayan0226/hotel:test1
+    build: .
     container_name: hotel-management-app
     volumes:
       - ./log_data:/logs
     restart: on-failure
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/hotel-management?createDatabaseIfNotExist=true
 #      SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:3306/hotel-management?createDatabaseIfNotExist=true
       SPRING_DATASOURCE_USERNAME: admin
       SPRING_DATASOURCE_PASSWORD: admin123
@@ -37,8 +37,10 @@ services:
       SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.MySQL8Dialect
       SPRING_APPLICATION_NAME: hotel-management
       SERVER_PORT: 8081
+      DB_HOST: host.docker.internal
+      DB_PORT: 3306
     ports:
-      - "8081:8081"
+      - "8083:8081"
     depends_on:
        mysql:
          condition: service_healthy
