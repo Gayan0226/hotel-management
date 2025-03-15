@@ -23,7 +23,7 @@ services:
 
 
   hotel-management-app:
-    image: gayan0226/hotel:v2
+    image: gayan0226/hotel:v1.0.1
     container_name: hotel-management-app
     volumes:
       - ./log_data:/logs
@@ -38,7 +38,7 @@ services:
       SPRING_APPLICATION_NAME: hotel-management
       SERVER_PORT: 8081
     ports:
-      - "8081:8081"
+      - "8083:8081"
     depends_on:
        mysql:
          condition: service_healthy
