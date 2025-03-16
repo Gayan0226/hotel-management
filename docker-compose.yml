@@ -23,8 +23,7 @@ services:
 
 
   hotel-management-app:
-#    image: gayan0226/hotel:test1
-    build: .
+    image: gayan0226/hotel:v1.0.1
     container_name: hotel-management-app
     volumes:
       - ./log_data:/logs
