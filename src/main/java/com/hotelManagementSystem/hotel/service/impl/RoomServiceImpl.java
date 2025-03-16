@@ -43,7 +43,7 @@ public class RoomServiceImpl extends CommonServiceImpl<Room, Integer, RoomReposi
     public String updateAvailability(int id, boolean available) {
         Room room = repository.findById(id).orElseThrow(() -> new NotFoundException("Cannot Change Availability"));
         room.setRoomAvailable(available);
-        repository.saveAndFlush(room);
+//        repository.saveAndFlush(room); After Added The GTransactional We Dont Need To Call The .save()
         return "Availability Is Changed  Successful";
     }
 

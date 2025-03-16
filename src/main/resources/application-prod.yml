@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ${SPRING_APPLICATION_NAME}
+  datasource:
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${ SPRING_DATASOURCE_PASSWORD }
+    url: jdbc:mysql://${DB_HOST}:${DB_PORT}/hotel-management?createDatabaseIfNotExist=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO}
+    show-sql: false
+    database-platform: ${SPRING_JPA_DATABASE_PLATFORM}
+server:
+  port: ${SERVER_PORT}
+

@@ -10,7 +10,7 @@
 
     <appender name="ROLLING_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>
-            ./logs/hotel.log
+            /logs/hotel.log
         </file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <fileNamePattern>/logs/archive/application-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
